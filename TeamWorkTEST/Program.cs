@@ -13,7 +13,7 @@ namespace TeamWorkTEST
         {
             using (var db = new NbaContext())
             {
-                db.Players.Add(new Models.Player { Name = "Pavel Ivanov" });
+                db.Players.Add(new Models.Player { PlayerName = "Pavel Ivanov" });
                 db.SaveChanges();
             }
         }
