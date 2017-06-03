@@ -1,0 +1,12 @@
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\bin\Debug\TeamWorkTEST.exe.config
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\bin\Debug\TeamWorkTEST.exe
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\bin\Debug\TeamWorkTEST.pdb
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\bin\Debug\EntityFramework.dll
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\bin\Debug\EntityFramework.xml
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\obj\Debug\TeamWorkTEST.csprojResolveAssemblyReference.cache
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\obj\Debug\TeamWorkTEST.exe
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\obj\Debug\TeamWorkTEST.pdb
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\obj\Debug\TeamWorkTEST.Migrations.InitialCreate.resources
+C:\Users\pafkata\Documents\GitHub\TelerikAcademy2016\DataBase\TeamWorkTEST\TeamWorkTEST\obj\Debug\TeamWorkTEST.csproj.GenerateResource.Cache

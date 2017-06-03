@@ -1,0 +1,9 @@
+/home/pavel/Desktop/TeamWorkTEST/TeamWorkTEST/obj/Debug/.NETFramework,Version=v4.5.2.AssemblyAttribute.cs
+/home/pavel/Desktop/TeamWorkTEST/TeamWorkTEST/obj/Debug/TeamWorkTEST.Migrations.InitialCreate.resources
+/home/pavel/Desktop/TeamWorkTEST/TeamWorkTEST/bin/Debug/TeamWorkTEST.exe.config
+/home/pavel/Desktop/TeamWorkTEST/TeamWorkTEST/bin/Debug/TeamWorkTEST.pdb
+/home/pavel/Desktop/TeamWorkTEST/TeamWorkTEST/bin/Debug/TeamWorkTEST.exe
+/home/pavel/Desktop/TeamWorkTEST/TeamWorkTEST/obj/Debug/TeamWorkTEST.exe
+/home/pavel/Desktop/TeamWorkTEST/TeamWorkTEST/obj/Debug/TeamWorkTEST.pdb
+/home/pavel/Desktop/TeamWorkTEST/TeamWorkTEST/bin/Debug/EntityFramework.dll
+/home/pavel/Desktop/TeamWorkTEST/TeamWorkTEST/bin/Debug/EntityFramework.SqlServer.dll
