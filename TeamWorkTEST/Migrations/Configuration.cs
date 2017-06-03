@@ -9,8 +9,7 @@ namespace TeamWorkTEST.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "NbaDb.NbaContext";
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(TeamWorkTEST.NbaContext context)
