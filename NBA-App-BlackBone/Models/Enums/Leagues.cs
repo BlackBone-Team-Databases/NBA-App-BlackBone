@@ -1,7 +1,7 @@
 ﻿
 namespace NBABlackBone.Models.Enums
 {
-    public enum Leagues
+    public enum LeaguesEnum
     {
         NBA = 1,
         WNBA = 2

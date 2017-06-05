@@ -6,18 +6,18 @@ using NBABlackBone.Models.Enums;
 namespace NBABlackBone
 {
 
-    public class Div
+    public class Devision
     {
-        public Div()
+        public Devision()
         {
 
         }
 
         public int Id { get; set; }
 
-        public Devisions Devision { get; set; }
+        public DevisionsEnum DevisionEnum { get; set; }
 
-        public virtual Conf Conference { get; set; }
+        public virtual Conference Conference { get; set; }
 
         public virtual ICollection<Team> Teams { get; set; }
 

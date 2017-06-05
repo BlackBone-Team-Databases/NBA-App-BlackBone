@@ -1,6 +1,6 @@
 ﻿namespace NBABlackBone.Models.Enums
 {
-    public enum Devisions
+    public enum DevisionsEnum
     {
         ATLANTIC = 1,
         CENTRAL = 2,

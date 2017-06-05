@@ -1,6 +1,6 @@
 ﻿namespace NBABlackBone.Models.Enums
 {
-    public enum Conferences
+    public enum ConferencesEnum
     {
         Eastern = 1,
         Western = 2

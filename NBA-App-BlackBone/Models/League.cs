@@ -4,17 +4,17 @@ using NBABlackBone.Models.Enums;
 
 namespace NBABlackBone.Models
 {
-    public class Leag
+    public class League
     {
-        public Leag()
+        public League()
         {
 
         }
         public string Id { get; set; }
 
-        public Leagues League { get; set; }
+        public LeaguesEnum LeagueEnum { get; set; }
 
-        public virtual ICollection<Conf> Conferences { get; set; }
+        public virtual ICollection<Conference> Conferences { get; set; }
 
         public string Url { get; set; }
     }

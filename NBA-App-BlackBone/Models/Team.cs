@@ -25,7 +25,7 @@ namespace NBABlackBone.Models
 
         public int OverallRtg { get; set; }
 
-        public virtual Div Devision { get; set; }
+        public virtual Devision Devision { get; set; }
 
         public virtual ICollection<Player> Players { get; set; }
 

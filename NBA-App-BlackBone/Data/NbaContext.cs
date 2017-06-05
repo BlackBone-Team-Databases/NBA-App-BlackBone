@@ -18,7 +18,5 @@ namespace NBABlackBone
         public DbSet<Player> Players { get; set; }
 
         public DbSet<Team> Teams { get; set; }
-
-        public DbSet<Conf> Conferences { get; set; }
     }
 }
