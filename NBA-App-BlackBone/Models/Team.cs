@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-namespace TeamWorkTEST.Models
+namespace NBABlackBone.Models
 {
     public class Team
     {
@@ -12,11 +13,17 @@ namespace TeamWorkTEST.Models
 
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
-
+        
+        public int Minutes { get; set; }
+        
         public string OffRtg { get; set; }
 
         public string DeffRtg { get; set; }
+
+        public int OverallRtg { get; set; }
 
         public virtual Div Devision { get; set; }
 

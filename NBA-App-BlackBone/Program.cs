@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeamWorkTEST
+namespace NBABlackBone
 {
     class Program
     {
@@ -13,7 +13,7 @@ namespace TeamWorkTEST
         {
             using (var db = new NbaContext())
             {
-                db.Players.Add(new Models.Player { PlayerName = "Pavel Ivanov" });
+                db.Players.Add(new Models.Player { FirstName = "Pavel Ivanov" });
                 db.SaveChanges();
             }
         }

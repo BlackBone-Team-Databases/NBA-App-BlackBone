@@ -1,4 +1,4 @@
-namespace TeamWorkTEST.Migrations
+namespace NBABlackBone.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

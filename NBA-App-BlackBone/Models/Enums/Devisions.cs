@@ -1,5 +1,4 @@
-﻿
-namespace TeamWorkTEST.Models.Enums
+﻿namespace NBABlackBone.Models.Enums
 {
     public enum Devisions
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{FA4510E7-DDCD-4E7E-8E74-A4E910DBA537}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TeamWorkTEST</RootNamespace>
-    <AssemblyName>TeamWorkTEST</AssemblyName>
+    <RootNamespace>NBABlackBone</RootNamespace>
+    <AssemblyName>NBABlackBone</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -58,6 +58,10 @@
     <Compile Include="Migrations\201706051300557_Models.Designer.cs">
       <DependentUpon>201706051300557_Models.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706051351299_put atributes.cs" />
+    <Compile Include="Migrations\201706051351299_put atributes.Designer.cs">
+      <DependentUpon>201706051351299_put atributes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\Enums\Conferences.cs" />
@@ -83,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706051300557_Models.resx">
       <DependentUpon>201706051300557_Models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706051351299_put atributes.resx">
+      <DependentUpon>201706051351299_put atributes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using TeamWorkTEST.Models;
-using TeamWorkTEST.Models.Enums;
+using NBABlackBone.Models;
+using NBABlackBone.Models.Enums;
 
-namespace TeamWorkTEST
+namespace NBABlackBone
 {
 
     public class Div
@@ -17,7 +17,7 @@ namespace TeamWorkTEST
 
         public Devisions Devision { get; set; }
 
-        public virtual Confer Conference { get; set; }
+        public virtual Conf Conference { get; set; }
 
         public virtual ICollection<Team> Teams { get; set; }
 

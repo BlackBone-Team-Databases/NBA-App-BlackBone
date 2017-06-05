@@ -4,9 +4,10 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TeamWorkTEST.Models;
+using NBABlackBone.Models;
+using NBABlackBone.Models.Enums;
 
-namespace TeamWorkTEST
+namespace NBABlackBone
 {
     public class NbaContext : DbContext
     {
@@ -17,5 +18,7 @@ namespace TeamWorkTEST
         public DbSet<Player> Players { get; set; }
 
         public DbSet<Team> Teams { get; set; }
+
+        public DbSet<Conf> Conferences { get; set; }
     }
 }

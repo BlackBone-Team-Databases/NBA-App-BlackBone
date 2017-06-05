@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TeamWorkTEST.Models
+namespace NBABlackBone.Models
 {
     public class PlayerStatistic
     {

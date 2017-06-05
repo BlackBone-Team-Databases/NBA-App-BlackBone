@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using TeamWorkTEST.Models.Enums;
+using NBABlackBone.Models.Enums;
 
-namespace TeamWorkTEST.Models
+namespace NBABlackBone.Models
 {
-    public class Confer
+    public class Conf
     {
-        public Confer()
+        public Conf()
         {
 
         }

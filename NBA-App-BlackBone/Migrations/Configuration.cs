@@ -1,18 +1,18 @@
-namespace TeamWorkTEST.Migrations
+namespace NBABlackBone.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<TeamWorkTEST.NbaContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<NBABlackBone.NbaContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(TeamWorkTEST.NbaContext context)
+        protected override void Seed(NBABlackBone.NbaContext context)
         {
             //  This method will be called after migrating to the latest version.
 

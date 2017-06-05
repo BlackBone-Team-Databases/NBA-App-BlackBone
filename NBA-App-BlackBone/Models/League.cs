@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using TeamWorkTEST.Models.Enums;
+using NBABlackBone.Models.Enums;
 
-namespace TeamWorkTEST.Models
+namespace NBABlackBone.Models
 {
     public class Leag
     {
@@ -14,7 +14,7 @@ namespace TeamWorkTEST.Models
 
         public Leagues League { get; set; }
 
-        public virtual ICollection<Confer> Conferences { get; set; }
+        public virtual ICollection<Conf> Conferences { get; set; }
 
         public string Url { get; set; }
     }
