@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TeamWorkTEST.Models.Enums;
 
 namespace TeamWorkTEST.Models
 {
@@ -9,11 +10,13 @@ namespace TeamWorkTEST.Models
         {
 
         }
-        public string ID { get; set; }
+        public string Id { get; set; }
 
-        public string Conference { get; set; }
+        public Conferences Conference { get; set; }
 
-        public virtual ICollection<Team> Team { get; set; }
+        public virtual Leag League { get; set; }
+
+        public virtual ICollection<Div> Devisions { get; set; }
 
         public string Url { get; set; }
     }

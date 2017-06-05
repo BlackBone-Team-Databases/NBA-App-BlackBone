@@ -54,21 +54,23 @@
     <Compile Include="Migrations\201706021325403_InitialCreate.Designer.cs">
       <DependentUpon>201706021325403_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706031557256_models.cs" />
-    <Compile Include="Migrations\201706031557256_models.Designer.cs">
-      <DependentUpon>201706031557256_models.cs</DependentUpon>
+    <Compile Include="Migrations\201706051300557_Models.cs" />
+    <Compile Include="Migrations\201706051300557_Models.Designer.cs">
+      <DependentUpon>201706051300557_Models.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Conference.cs" />
+    <Compile Include="Models\Enums\Conferences.cs" />
+    <Compile Include="Models\Enums\Devisions.cs" />
+    <Compile Include="Models\Enums\Leagues.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Nba.cs" />
+    <Compile Include="Models\Div.cs" />
     <Compile Include="Data\NbaContext.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\PlayerStatistic.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\League.cs" />
-    <Compile Include="Models\Wnba.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -79,8 +81,8 @@
     <EmbeddedResource Include="Migrations\201706021325403_InitialCreate.resx">
       <DependentUpon>201706021325403_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706031557256_models.resx">
-      <DependentUpon>201706031557256_models.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706051300557_Models.resx">
+      <DependentUpon>201706051300557_Models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

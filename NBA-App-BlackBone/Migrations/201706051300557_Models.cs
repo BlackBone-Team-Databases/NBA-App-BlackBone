@@ -3,7 +3,7 @@ namespace TeamWorkTEST.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class models : DbMigration
+    public partial class Models : DbMigration
     {
         public override void Up()
         {
@@ -45,34 +45,47 @@ namespace TeamWorkTEST.Migrations
                         OffRtg = c.String(),
                         DeffRtg = c.String(),
                         Url = c.String(),
-                        Conference_ID = c.String(maxLength: 128),
-                        League_ID = c.String(maxLength: 128),
+                        Devision_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Confers", t => t.Conference_ID)
-                .ForeignKey("dbo.Leags", t => t.League_ID)
-                .Index(t => t.Conference_ID)
-                .Index(t => t.League_ID);
+                .ForeignKey("dbo.Divs", t => t.Devision_Id)
+                .Index(t => t.Devision_Id);
+            
+            CreateTable(
+                "dbo.Divs",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Devision = c.Int(nullable: false),
+                        Url = c.String(),
+                        Conference_Id = c.String(maxLength: 128),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Confers", t => t.Conference_Id)
+                .Index(t => t.Conference_Id);
             
             CreateTable(
                 "dbo.Confers",
                 c => new
                     {
-                        ID = c.String(nullable: false, maxLength: 128),
-                        Conference = c.String(),
+                        Id = c.String(nullable: false, maxLength: 128),
+                        Conference = c.Int(nullable: false),
                         Url = c.String(),
+                        League_Id = c.String(maxLength: 128),
                     })
-                .PrimaryKey(t => t.ID);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Leags", t => t.League_Id)
+                .Index(t => t.League_Id);
             
             CreateTable(
                 "dbo.Leags",
                 c => new
                     {
-                        ID = c.String(nullable: false, maxLength: 128),
-                        League = c.String(),
+                        Id = c.String(nullable: false, maxLength: 128),
+                        League = c.Int(nullable: false),
                         Url = c.String(),
                     })
-                .PrimaryKey(t => t.ID);
+                .PrimaryKey(t => t.Id);
             
             DropTable("dbo.NBAs");
         }
@@ -91,15 +104,18 @@ namespace TeamWorkTEST.Migrations
                 .PrimaryKey(t => t.Id);
             
             DropForeignKey("dbo.Players", "Team_Id", "dbo.Teams");
-            DropForeignKey("dbo.Teams", "League_ID", "dbo.Leags");
-            DropForeignKey("dbo.Teams", "Conference_ID", "dbo.Confers");
+            DropForeignKey("dbo.Teams", "Devision_Id", "dbo.Divs");
+            DropForeignKey("dbo.Confers", "League_Id", "dbo.Leags");
+            DropForeignKey("dbo.Divs", "Conference_Id", "dbo.Confers");
             DropForeignKey("dbo.PlayerStatistics", "Id", "dbo.Players");
-            DropIndex("dbo.Teams", new[] { "League_ID" });
-            DropIndex("dbo.Teams", new[] { "Conference_ID" });
+            DropIndex("dbo.Confers", new[] { "League_Id" });
+            DropIndex("dbo.Divs", new[] { "Conference_Id" });
+            DropIndex("dbo.Teams", new[] { "Devision_Id" });
             DropIndex("dbo.PlayerStatistics", new[] { "Id" });
             DropIndex("dbo.Players", new[] { "Team_Id" });
             DropTable("dbo.Leags");
             DropTable("dbo.Confers");
+            DropTable("dbo.Divs");
             DropTable("dbo.Teams");
             DropTable("dbo.PlayerStatistics");
             DropTable("dbo.Players");
