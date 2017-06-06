@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using NBABlackBone.Models.Enums;
+using NBABlackBone.Models.Contracts;
 
 namespace NBABlackBone.Models
 {
-    public class Conference
+    public class Conference : IConference
     {
         public Conference()
         {

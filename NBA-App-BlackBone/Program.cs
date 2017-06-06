@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NBABlackBone.Core.Providers;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -11,11 +12,29 @@ namespace NBABlackBone
     {
         static void Main(string[] args)
         {
-            /*using (var db = new NbaContext())
+            var reader = new ConsoleReaderProvider();
+            var writer = new ConsoleWriterProvider();
+
+            /* using (var db = new NbaContext())
             {
                 db.Players.Add(new Models.Player { FirstName = "Pavel Ivanov" });
                 db.SaveChanges();
+
+
+                var query = from b in db.Players
+                            orderby b.FirstName
+                            select b;
+          
+                Console.WriteLine("All blogs in the database:");
+                foreach (var item in query)
+                {
+                    Console.WriteLine(item.FirstName);
+                    Console.WriteLine(item.LastName);
+                }
+
             }*/
+
+
             int input = 6;
             bool res;
             while (input != 0)
@@ -54,12 +73,12 @@ namespace NBABlackBone
                         if (input == 1)
                         {
                             // TODO
-                            //CreatePlayerCommand()
+                            //CreatePlayerCommand(this.reader, this.writer)
                         }
                         else if (input == 2)
                         {
                             // TODO
-                            //CreateTeamCommand()
+                            //CreateTeamCommand(this.reader, this.writer)
                         }
                         else if (input == 3)
                         {
@@ -89,17 +108,17 @@ namespace NBABlackBone
                         if (input == 1)
                         {
                             // TODO
-                            //ReadPlayerCommand()
+                            //ReadPlayerCommand(this.reader, this.writer)
                         }
                         else if (input == 2)
                         {
                             // TODO
-                            //ReadTeamCommand()
+                            //ReadTeamCommand(this.reader, this.writer)
                         }
                         else if (input == 3)
                         {
                             // TODO
-                            //ReadPSCommand()
+                            //ReadPSCommand(this.reader, this.writer)
                         }
                         else if (input == 4)
                         {
@@ -129,17 +148,17 @@ namespace NBABlackBone
                         if (input == 1)
                         {
                             // TODO
-                            //UpdatePlayerCommand()
+                            //UpdatePlayerCommand(this.reader, this.writer)
                         }
                         else if (input == 2)
                         {
                             // TODO
-                            //UpdateTeamCommand()
+                            //UpdateTeamCommand(this.reader, this.writer)
                         }
                         else if (input == 3)
                         {
                             // TODO
-                            //UpdatePSCommand()
+                            //UpdatePSCommand(this.reader, this.writer)
                         }
                         else if (input == 4)
                         {
@@ -168,12 +187,12 @@ namespace NBABlackBone
                         if (input == 1)
                         {
                             // TODO
-                            //DeletePlayerCommand()
+                            //DeletePlayerCommand(this.reader, this.writer)
                         }
                         else if (input == 2)
                         {
                             // TODO
-                            //DeleteTeamCommand()
+                            //DeleteTeamCommand(this.reader, this.writer)
                         }
                         else if (input == 3)
                         {

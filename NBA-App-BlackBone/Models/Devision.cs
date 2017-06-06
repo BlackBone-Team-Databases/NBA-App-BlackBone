@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using NBABlackBone.Models;
 using NBABlackBone.Models.Enums;
+using NBABlackBone.Models.Contracts;
 
 namespace NBABlackBone
 {
 
-    public class Devision
+    public class Devision : IDevision
     {
         public Devision()
         {

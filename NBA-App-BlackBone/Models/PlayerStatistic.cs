@@ -1,9 +1,10 @@
-﻿using System;
+﻿using NBABlackBone.Models.Contracts;
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NBABlackBone.Models
 {
-    public class PlayerStatistic
+    public class PlayerStatistic : IPlayerStatistic
     {
         public PlayerStatistic()
         {

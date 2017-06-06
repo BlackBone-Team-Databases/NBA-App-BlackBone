@@ -7,13 +7,13 @@ namespace NBABlackBone.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class putatributes : IMigrationMetadata
+    public sealed partial class models : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(putatributes));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(models));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706051351299_put atributes"; }
+            get { return "201706060837534_models"; }
         }
         
         string IMigrationMetadata.Source

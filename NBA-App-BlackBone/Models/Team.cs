@@ -1,10 +1,11 @@
-﻿using System;
+﻿using NBABlackBone.Models.Contracts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace NBABlackBone.Models
 {
-    public class Team
+    public class Team : ITeam
     {
         public Team()
         {

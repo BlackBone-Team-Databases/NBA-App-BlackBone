@@ -1,10 +1,11 @@
-﻿using System;
+﻿using NBABlackBone.Models.Contracts;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NBABlackBone.Models
 {
-    public class Player
+    public class Player : IPlayer
     {
         public Player()
         {
