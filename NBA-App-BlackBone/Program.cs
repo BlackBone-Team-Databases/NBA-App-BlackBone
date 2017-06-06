@@ -1,10 +1,13 @@
 ﻿using NBABlackBone.Core.Providers;
+using NBABlackBone.Models;
+using NBABlackBone.Parsers;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace NBABlackBone
 {
@@ -33,6 +36,11 @@ namespace NBABlackBone
                 }
 
             }*/
+
+            //var parser = new JsonParse();
+            //parser.TeamParse(@"C:\Users\admin\Desktop\AllData20120510040\json\teamstats20120510040.json"); //teamStats i team sa w edno
+            //parser.PlayerParse(@"C:\Users\admin\Desktop\AllData20120510040\json\players20120510040.json");
+            //parser.PlayerStatsticParse(@"C:\Users\admin\Desktop\AllData20120510040\json\.json"); // player stats da se naprawi w json
 
 
             int input = 6;
