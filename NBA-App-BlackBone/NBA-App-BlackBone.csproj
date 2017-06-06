@@ -62,6 +62,10 @@
     <Compile Include="Migrations\201706060837534_models.Designer.cs">
       <DependentUpon>201706060837534_models.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706061020393_ss.cs" />
+    <Compile Include="Migrations\201706061020393_ss.Designer.cs">
+      <DependentUpon>201706061020393_ss.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\Contracts\IConference.cs" />
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706060837534_models.resx">
       <DependentUpon>201706060837534_models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706061020393_ss.resx">
+      <DependentUpon>201706061020393_ss.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,7 +13,7 @@ namespace NBABlackBone.Models.Contracts
 
         LeaguesEnum LeagueEnum { get; set; }
 
-        ICollection<Conference> Conferences { get; set; }
+        ICollection<IConference> Conferences { get; set; }
 
         string Url { get; set; }
     }

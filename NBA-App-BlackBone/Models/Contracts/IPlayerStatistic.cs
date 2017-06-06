@@ -16,7 +16,7 @@ namespace NBABlackBone.Models.Contracts
 
         int Blocks { get; set; }
 
-        Player Player { get; set; }
+        IPlayer Player { get; set; }
 
         string Url { get; set; }
     }

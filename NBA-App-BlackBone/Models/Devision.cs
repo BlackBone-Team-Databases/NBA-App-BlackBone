@@ -18,9 +18,9 @@ namespace NBABlackBone
 
         public DevisionsEnum DevisionEnum { get; set; }
 
-        public virtual Conference Conference { get; set; }
+        public virtual IConference Conference { get; set; }
 
-        public virtual ICollection<Team> Teams { get; set; }
+        public virtual ICollection<ITeam> Teams { get; set; }
 
         public string Url { get; set; }
     }

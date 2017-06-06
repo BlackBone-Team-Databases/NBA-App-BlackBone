@@ -15,7 +15,7 @@ namespace NBABlackBone.Models
 
         public LeaguesEnum LeagueEnum { get; set; }
 
-        public virtual ICollection<Conference> Conferences { get; set; }
+        public virtual ICollection<IConference> Conferences { get; set; }
 
         public string Url { get; set; }
     }

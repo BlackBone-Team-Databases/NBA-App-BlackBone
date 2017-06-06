@@ -28,9 +28,9 @@ namespace NBABlackBone.Models
 
         public string Position { get; set; }
 
-        public virtual PlayerStatistic PlayerStatistic { get; set; }
+        public virtual IPlayerStatistic PlayerStatistic { get; set; }
 
-        public virtual Team Team { get; set; }
+        public virtual ITeam Team { get; set; }
 
         public string Url { get; set; }
     }

@@ -13,9 +13,9 @@ namespace NBABlackBone.Models.Contracts
 
         ConferencesEnum ConferenceEnum { get; set; }
 
-        League League { get; set; }
+        ILeague League { get; set; }
 
-        ICollection<Devision> Devisions { get; set; }
+        ICollection<IDevision> Devisions { get; set; }
 
         string Url { get; set; }
     }

@@ -20,9 +20,9 @@ namespace NBABlackBone.Models.Contracts
 
         int OverallRtg { get; set; }
 
-        Devision Devision { get; set; }
+        IDevision Devision { get; set; }
 
-        ICollection<Player> Players { get; set; }
+        ICollection<IPlayer> Players { get; set; }
 
         string Url { get; set; }
     }

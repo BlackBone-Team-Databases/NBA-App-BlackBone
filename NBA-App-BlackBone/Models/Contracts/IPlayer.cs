@@ -18,9 +18,9 @@ namespace NBABlackBone.Models.Contracts
 
         string Position { get; set; }
 
-        PlayerStatistic PlayerStatistic { get; set; }
+        IPlayerStatistic PlayerStatistic { get; set; }
 
-        Team Team { get; set; }
+        ITeam Team { get; set; }
 
         string Url { get; set; }
     }
