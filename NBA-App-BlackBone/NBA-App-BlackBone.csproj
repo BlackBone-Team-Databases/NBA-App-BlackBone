@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -85,6 +89,7 @@
     <Compile Include="Persistance\Repositories\Repository.cs" />
     <Compile Include="Persistance\Repositories\TeamRepository.cs" />
     <Compile Include="Persistance\UnitOfWork.cs" />
+    <Compile Include="Parsers\XmlParse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Devision.cs" />
