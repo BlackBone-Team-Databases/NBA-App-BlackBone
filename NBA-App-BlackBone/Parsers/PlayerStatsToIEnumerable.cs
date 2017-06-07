@@ -45,10 +45,10 @@ namespace NBABlackBone.Parsers
                 playersStatsCollection.Add(playerStats);
             }
 
-            foreach (var playerStats in playersStatsCollection)
-            {
-                Console.WriteLine(playerStats.ToString());
-            }
+            //foreach (var playerStats in playersStatsCollection)
+            //{
+            //    Console.WriteLine(playerStats.ToString());
+            //}
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using NbaBlackBone.Core.Contracts;
+using NbaBlackBone.Persistance;
+using System;
 
 namespace NBABlackBone.Core.Menu
 {
@@ -18,7 +20,7 @@ namespace NBABlackBone.Core.Menu
             int input = 6;
             while (input != 0)
             {
-                PrintMainMenu();
+                PrintMenu.MainMenu();
 
                 input = Input();
 
@@ -27,83 +29,42 @@ namespace NBABlackBone.Core.Menu
                 switch (input)
                 {
                     case 1:
-                        PrintCreateMenu();
+                        PrintMenu.CreateMenu();
                         input = Input();
+                        CreateCommandMenu(input);
                         break;
                     case 2:
-                        PrintReadMenu();
+                        PrintMenu.ReadMenu();
                         input = Input();
+                        ReadCommandMenu(input);
                         break;
                     case 3:
-                        PrintUpdateMenu();
+                        PrintMenu.UpdateMenu();
                         input = Input();
+                        UpdateCommandMenu(input);
                         break;
                     case 4:
-                        PrintDeleteMenu();
+                        PrintMenu.DeleteMenu();
                         input = Input();
+                        DeleteCommandMenu(input);
                         break;
                     case 5:
                         // TODO : GenerateReportCommand()
                         break;
                     case 0:
-                        return;
+                        Environment.Exit(0);
+                        break;
                     default:
 
                         this.writer.WriteLine("Incorect Input value");
                         break;
                 }
-                this.writer.EmptyLine();
-                this.writer.WriteLine("===================================================");
-                this.writer.EmptyLine();
 
+                PrintDelimeter();
             }
         }
 
-        private void PrintMainMenu()
-        {
-            this.writer.WriteLine("Choose from the options below");
-            this.writer.WriteLine("1. Create");
-            this.writer.WriteLine("2. Read");
-            this.writer.WriteLine("3. Update");
-            this.writer.WriteLine("4. Delete");
-            this.writer.WriteLine("5. Generete Report");
-            this.writer.WriteLine("0. Exit");
-            this.writer.EmptyLine();
-        }
 
-        private void PrintCreateMenu()
-        {
-            this.writer.WriteLine("Choose what to create:");
-            this.writer.WriteLine("1. Create Player");
-            this.writer.WriteLine("2. Create Team");
-            this.writer.WriteLine("3. Back");
-        }
-
-        private void PrintReadMenu()
-        {
-            this.writer.WriteLine("Choose what to read:");
-            this.writer.WriteLine("1. Read Player");
-            this.writer.WriteLine("2. Read Team");
-            this.writer.WriteLine("3. Read Player Stats");
-            this.writer.WriteLine("4. Back");
-        }
-
-        private void PrintUpdateMenu()
-        {
-            this.writer.WriteLine("Choose what to update:");
-            this.writer.WriteLine("1. Update Player Info");
-            this.writer.WriteLine("2. Update Team Info");
-            this.writer.WriteLine("3. Update Player Stats");
-            this.writer.WriteLine("4. Back");
-        }
-
-        private void PrintDeleteMenu()
-        {
-            this.writer.WriteLine("Choose what to delete:");
-            this.writer.WriteLine("1. Delete Player (will delete the player statistic also)");
-            this.writer.WriteLine("2. Delete Team");
-            this.writer.WriteLine("3. Back");
-        }
 
         private int Input()
         {
@@ -119,7 +80,86 @@ namespace NBABlackBone.Core.Menu
 
         private void PrintDelimeter()
         {
-            this.writer.WriteLine("===================================================");
+            this.writer.EmptyLine();
+            this.writer.WriteLine("======================================================");
+            this.writer.EmptyLine();
+        }
+
+        private void CreateCommandMenu(int input)
+        {
+            using ( var unitOfWork = new UnitOfWork(new NbaContext()))
+            {
+                if (input == 1)
+                {
+                    // TODO : CreatePlayerCommand(reader, writer, unitOfWork);
+                    //unitOfWork.Players.Add()
+                }
+                else if (input == 2)
+                {
+                    // TODO : CreateTeamCommand(reader, writer, unitOfWork);
+                }
+                else if (input != 3)
+                {
+                    writer.WriteLine("Ivalid Value!");
+                }
+            }
+        }
+
+        private void UpdateCommandMenu(int input)
+        {
+            if (input == 1)
+            {
+                // TODO : UpdatePlayerCommand();
+            }
+            else if (input == 2)
+            {
+                // TODO : UpdateTeamCommand();
+            }
+            else if (input == 3)
+            {
+                // TODO : UpdatePlayerStatisticCommand();
+            }
+            else if (input != 4)
+            {
+                writer.WriteLine("Ivalid Value!");
+            }
+        }
+
+
+        private void ReadCommandMenu(int input)
+        {
+            if (input == 1)
+            {
+                // TODO : ReadPlayerCommand();
+            }
+            else if (input == 2)
+            {
+                // TODO : ReadTeamCommand();
+            }
+            else if (input == 3)
+            {
+                // TODO : ReadPlayerStatisticCommand();
+            }
+            else if (input != 4)
+            {
+                writer.WriteLine("Ivalid Value!");
+            }
+        }
+
+        private void DeleteCommandMenu(int input)
+        {
+            if (input == 1)
+            {
+                // TODO : DeletePlayerCommand();
+            }
+            else if (input == 2)
+            {
+                // TODO : DeleteTeamCommand();
+            }
+            else if (input == 3)
+            {
+                writer.WriteLine("Ivalid Value!");
+            }
         }
     }
 }

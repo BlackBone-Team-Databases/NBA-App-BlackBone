@@ -8,7 +8,7 @@ using NBABlackBone.Core.Repositories;
 
 namespace NbaBlackBone.Persistance
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly NbaContext context;
 

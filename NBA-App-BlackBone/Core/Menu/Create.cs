@@ -8,5 +8,6 @@ namespace NBABlackBone.Core.Menu
 {
     public class Create
     {
+
     }
 }

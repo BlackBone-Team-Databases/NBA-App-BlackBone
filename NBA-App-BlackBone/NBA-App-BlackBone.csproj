@@ -57,8 +57,9 @@
   <ItemGroup>
     <Compile Include="Core\Contracts\IReader.cs" />
     <Compile Include="Core\Contracts\IWriter.cs" />
+    <Compile Include="Core\Menu\ConsoleReadProvider.cs" />
     <Compile Include="Core\Menu\Create.cs" />
-    <Compile Include="Core\Menu\MainMenu.cs" />
+    <Compile Include="Core\Menu\PrintMenu.cs" />
     <Compile Include="Core\Menu\Menu.cs" />
     <Compile Include="Core\Menu\Read.cs" />
     <Compile Include="Core\Menu\Update.cs" />
