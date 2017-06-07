@@ -86,6 +86,7 @@
     <Compile Include="Models\Nba.cs" />
     <Compile Include="Models\Wnba.cs" />
     <Compile Include="Parsers\JsonParse.cs" />
+    <Compile Include="Parsers\TxtParse.cs" />
     <Compile Include="Persistance\Repositories\Repository.cs" />
     <Compile Include="Persistance\Repositories\TeamRepository.cs" />
     <Compile Include="Persistance\UnitOfWork.cs" />
