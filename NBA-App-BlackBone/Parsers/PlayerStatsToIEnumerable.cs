@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NBABlackBone.Parsers
 {
-    class PlayerStatsToIEnumerable
+    public class PlayerStatsToIEnumerable
     {
         ICollection<IPlayerStatistic> playersStatsCollection;
 
@@ -23,10 +23,10 @@ namespace NBABlackBone.Parsers
             var x = new TxtParse();
             string[,] array = x.Parse(path);
 
-            int min = 3;
-            int SpossF = 4;
-            int SpointsF = 6;
-            int SorebF = 11;
+            int min = 4;
+            int SpossF = 5;
+            int SpointsF = 7;
+            int SorebF = 12;
 
             for (int index = 1; index < array.GetLength(0); index++)
             {
