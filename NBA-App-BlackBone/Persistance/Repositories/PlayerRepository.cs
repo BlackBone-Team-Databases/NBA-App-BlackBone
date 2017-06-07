@@ -11,7 +11,7 @@ using NbaBlackBone.Persistance;
 
 namespace NBABlackBone.Persistance.Repositories
 {
-    class PlayerRepository : Repository<Player>, IPlayerRepository
+    class PlayerRepository : Repository<IPlayer>, IPlayerRepository
     {
         public PlayerRepository(NbaContext context) 
             : base(context)
@@ -19,9 +19,15 @@ namespace NBABlackBone.Persistance.Repositories
 
         }
 
-        public IEnumerable<Player> GetTopPlayers(int count)
+        public IEnumerable<IPlayer> GetTopPlayers(int count)
         {
-            throw new NotImplementedException();
+            //return PlutoContext.Courses.OrderByDescending(c => c.FullPrice).Take(count).ToList();
+            return NbaContext.Players.OrderByDescending(p => p.PlayerStatistic.PPG).Take(count).ToList();
+        }
+
+        public NbaContext NbaContext
+        {
+            get { return context as NbaContext; }
         }
     }
 }

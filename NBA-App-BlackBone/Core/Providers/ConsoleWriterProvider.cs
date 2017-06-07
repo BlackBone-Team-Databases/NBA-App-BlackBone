@@ -13,5 +13,10 @@ namespace NbaBlackBone.Core.Providers
         {
             Console.WriteLine(message);
         }
+
+        public void EmptyLine()
+        {
+            Console.WriteLine();
+        }
     }
 }

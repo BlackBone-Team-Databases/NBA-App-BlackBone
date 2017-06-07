@@ -13,5 +13,7 @@
         /// </summary>
         /// <param name="message">The data to be written.</param>
         void WriteLine(string message);
+
+        void EmptyLine();
     }
 }

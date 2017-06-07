@@ -6,17 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 using NbaBlackBone.Models;
 using NbaBlackBone.Models.Enums;
+using NbaBlackBone.Models.Contracts;
 
 namespace NbaBlackBone.Persistance
 {
     public class NbaContext : DbContext
     {
-        public NbaContext():base("name = NbaContext")
+        public NbaContext()
+            : base("name = NbaContext")
         {
 
         }
-        public DbSet<Player> Players { get; set; }
+        public IDbSet<IPlayer> Players { get; set; }
 
-        public DbSet<Team> Teams { get; set; }
+        public IDbSet<ITeam> Teams { get; set; }
+
+        public IDbSet<IPlayerStatistic> PlayerStatistics { get; set; }
     }
 }

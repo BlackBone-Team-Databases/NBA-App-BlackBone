@@ -20,7 +20,7 @@ namespace NBABlackBone.Parsers
         public void Cast()
         {
             var x = new TxtParse();
-            string[,] arr = x.Parse(@"..\..\DataSource\players20120510040.txt");
+            string[,] array = x.Parse(@"..\..\DataSource\players20120510040.txt");
 
             int name = 1;
             int lastName = 2;
@@ -28,27 +28,27 @@ namespace NBABlackBone.Parsers
 
 
 
-            for (int index = 0; index < arr.GetLength(0); index++)
+            for (int index = 0; index < array.GetLength(0); index++)
             {
-                if(string.IsNullOrEmpty(arr[index, 0]))
+                if (string.IsNullOrEmpty(array[index, 0]))
                 {
                     break;
                 }
                 var player = new Player()
                 {
-                    FirstName = arr[index, name],
-                    LastName = arr[index, lastName],
-                    Position = arr[index, position]
+                    FirstName = array[index, name],
+                    LastName = array[index, lastName],
+                    Position = array[index, position]
 
                 };
 
                 playersColection.Add(player);
             }
 
-            foreach (var player in playersColection)
-            {
-                Console.WriteLine(player.ToString());
-            }
+            //foreach (var player in playersColection)
+            //{
+            //    Console.WriteLine(player.ToString());
+            //}
         }
     }
 }

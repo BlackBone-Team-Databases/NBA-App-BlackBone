@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NbaBlackBone.Repositories;
+using NBABlackBone.Core.Repositories;
 
 namespace NbaBlackBone.Persistance
 {
@@ -21,6 +22,8 @@ namespace NbaBlackBone.Persistance
         public IPlayerRepository Players { get; private set; }
 
         public ITeamRepository Teams { get; private set; }
+
+        public ILeagueRepository League { get; private set; }
 
         public int Complete()
         {

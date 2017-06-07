@@ -20,17 +20,17 @@ namespace NBABlackBone.Persistance.Repositories
 
         public void Add(TEntity entity)
         {
-            throw new NotImplementedException();
+            context.Set<TEntity>().Add(entity);
         }
 
         public void AddRange(IEnumerable<TEntity> entities)
         {
-            throw new NotImplementedException();
+            context.Set<TEntity>().AddRange(entities);
         }
 
         public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return context.Set<TEntity>().Where(predicate);
         }
 
         public TEntity Get(int id)

@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace NbaBlackBone.Repositories
 {
-    public interface IPlayerRepository : IRepository<Player>
+    public interface IPlayerRepository : IRepository<IPlayer>
     {
-        IEnumerable<Player> GetTopPlayers(int count);
+        IEnumerable<IPlayer> GetTopPlayers(int count);
     }
 }
