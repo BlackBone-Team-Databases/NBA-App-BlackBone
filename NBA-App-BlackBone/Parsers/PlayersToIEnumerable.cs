@@ -28,7 +28,7 @@ namespace NBABlackBone.Parsers
 
 
 
-            for (int index = 0; index < array.GetLength(0); index++)
+            for (int index = 1; index < array.GetLength(0); index++)
             {
                 if (string.IsNullOrEmpty(array[index, 0]))
                 {
@@ -38,7 +38,7 @@ namespace NBABlackBone.Parsers
                 {
                     FirstName = array[index, name],
                     LastName = array[index, lastName],
-                    Position = array[index, position]
+                    Position = float.Parse(array[index, position])
 
                 };
 

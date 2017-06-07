@@ -24,7 +24,7 @@ namespace NbaBlackBone.Models
         [NotMapped]
         public string FirstLastName => $"{this.FirstName} {this.LastName}";
 
-        public string Position { get; set; }
+        public float Position { get; set; }
 
         public virtual IPlayerStatistic PlayerStatistic { get; set; }
 

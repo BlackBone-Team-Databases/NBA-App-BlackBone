@@ -14,7 +14,7 @@ namespace NbaBlackBone.Models.Contracts
 
         string LastName { get; set; }
 
-        string Position { get; set; }
+        float Position { get; set; }
 
         IPlayerStatistic PlayerStatistic { get; set; }
 

@@ -12,13 +12,13 @@ namespace NbaBlackBone.Models.Contracts
 
         string Name { get; set; }
 
-        int Minutes { get; set; }
+        float Minutes { get; set; }
 
-        string OffRtg { get; set; }
+        float OffRtg { get; set; }
 
-        string DeffRtg { get; set; }
+        float DeffRtg { get; set; }
 
-        int OverallRtg { get; set; }
+        float OverallRtg { get; set; }
 
         IDevision Devision { get; set; }
 

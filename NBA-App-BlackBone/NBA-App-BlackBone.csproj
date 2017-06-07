@@ -95,6 +95,7 @@
     <Compile Include="Models\Wnba.cs" />
     <Compile Include="Parsers\JsonParse.cs" />
     <Compile Include="Parsers\PlayersToIEnumerable.cs" />
+    <Compile Include="Parsers\TeamsToIEnumerable.cs" />
     <Compile Include="Parsers\TxtParse.cs" />
     <Compile Include="Persistance\Repositories\ConferenceRepository.cs" />
     <Compile Include="Persistance\Repositories\DevisionRepository.cs" />
