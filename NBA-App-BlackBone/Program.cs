@@ -21,7 +21,7 @@ namespace NbaBlackBone
             var reader = new ConsoleReaderProvider();
             var writer = new ConsoleWriterProvider();
 
-            var x = new TeamsToIEnumerable();
+            var x = new PlayerStatsToIEnumerable();
             x.Cast();
             //var x = new TxtParse();
             //x.Parse(@"..\..\DataSource\teamstats20120510040.txt");

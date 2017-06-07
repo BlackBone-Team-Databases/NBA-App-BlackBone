@@ -22,7 +22,7 @@ namespace NBABlackBone.Persistance.Repositories
         public IEnumerable<IPlayer> GetTopPlayers(int count)
         {
             //return PlutoContext.Courses.OrderByDescending(c => c.FullPrice).Take(count).ToList();
-            return NbaContext.Players.OrderByDescending(p => p.PlayerStatistic.PPG).Take(count).ToList();
+            return NbaContext.Players.OrderByDescending(p => p.PlayerStatistic.SimplePointsFor).Take(count).ToList();
         }
 
         public NbaContext NbaContext

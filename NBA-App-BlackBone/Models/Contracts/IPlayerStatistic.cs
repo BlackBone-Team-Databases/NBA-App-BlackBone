@@ -10,11 +10,13 @@ namespace NbaBlackBone.Models.Contracts
     {
         int Id { get; set; }
 
-        int PPG { get; set; }
+        float Minutes { get; set; }
 
-        int PRG { get; set; }
+        int SimplePossFor { get; set; }
 
-        int Blocks { get; set; }
+        int SimplePointsFor { get; set; }
+
+        int SimpleORebFor { get; set; }
 
         IPlayer Player { get; set; }
 

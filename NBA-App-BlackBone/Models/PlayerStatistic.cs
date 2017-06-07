@@ -14,14 +14,21 @@ namespace NbaBlackBone.Models
         [ForeignKey("Player")]
         public int Id { get; set; }
 
-        public int PPG { get; set; }
+        public float Minutes { get; set; }
 
-        public int PRG { get; set; }
+        public int SimplePossFor { get; set; }
 
-        public int Blocks { get; set; }
+        public int SimplePointsFor { get; set; }
+
+        public int SimpleORebFor { get; set; }
 
         public virtual IPlayer Player { get; set; }
 
         public string Url { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format($"Minutes: {Minutes}\nPossesionFor: {SimplePossFor}\nPointsFor: {SimplePointsFor}\nReboundFor: {SimpleORebFor}\n");
+        }
     }
 }

@@ -19,8 +19,9 @@ namespace NBABlackBone.Parsers
 
         public void Cast()
         {
+            string path = @"..\..\DataSource\teamstats20120510040.txt";
             var x = new TxtParse();
-            string[,] array = x.Parse(@"..\..\DataSource\teamstats20120510040.txt");
+            string[,] array = x.Parse(path);
 
             int name = 0;
             int min = 1;
@@ -38,7 +39,7 @@ namespace NBABlackBone.Parsers
                 }
                 var team = new Team()
                 {
-                    Name = array[index, name].ToString(),
+                    Name = array[index, name],
                     Minutes = float.Parse(array[index, min]),
                     OffRtg = float.Parse(array[index, offrtg]),
                     DeffRtg = float.Parse(array[index, deffrtg]),
@@ -48,9 +49,9 @@ namespace NBABlackBone.Parsers
                 TeamsCollection.Add(team);
             }
 
-            foreach (var player in TeamsCollection)
+            foreach (var team in TeamsCollection)
             {
-              Console.WriteLine(player.ToString());
+              Console.WriteLine(team.ToString());
             }
         }
     }
