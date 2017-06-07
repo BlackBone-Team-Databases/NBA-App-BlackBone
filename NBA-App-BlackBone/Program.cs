@@ -1,6 +1,7 @@
 ﻿using NbaBlackBone.Core.Providers;
 using NbaBlackBone.Models;
 using NbaBlackBone.Parsers;
+using NBABlackBone.Parsers;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -18,6 +19,11 @@ namespace NbaBlackBone
         {
             //var reader = new ConsoleReaderProvider();
             //var writer = new ConsoleWriterProvider();
+
+            var x = new TxtParse();
+            x.Parse(@"C:\Users\boda66\Desktop\TeamWork\NBA-App-BlackBone\NBA-App-BlackBone\DataSource\teamstats20120510040.txt");
+            //x.Parse(@"C:\Users\boda66\Desktop\TeamWork\NBA-App-BlackBone\NBA-App-BlackBone\DataSource\players20120510040.txt");
+            //x.Parse(@"C:\Users\boda66\Desktop\TeamWork\NBA-App-BlackBone\NBA-App-BlackBone\DataSource\playerstats20120510040.txt");
 
             //string con = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\admin\Desktop\AllData20120510040\xlsx\players20120510040.xlsx;";
             //using (OleDbConnection connection = new OleDbConnection(con))
