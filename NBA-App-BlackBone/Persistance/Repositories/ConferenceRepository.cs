@@ -1,25 +1,23 @@
 ﻿using NbaBlackBone.Models;
 using NbaBlackBone.Repositories;
+using NBABlackBone.Core.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NbaBlackBone.Models.Contracts;
-using System.Linq.Expressions;
-using NbaBlackBone.Persistance;
+using System.Data.Entity;
 
 namespace NBABlackBone.Persistance.Repositories
 {
-    public class TeamRepository : Repository<Team>, ITeamRepository
+    public class ConferenceRepository : Repository<Conference>, IConferenceRepository
     {
-        public TeamRepository(NbaContext context) 
+        public ConferenceRepository(DbContext context) 
             : base(context)
         {
-
         }
 
-        public IEnumerable<Team> GetTopTeams(int count)
+        public IEnumerable<Conference> GetTopTeamByConference(int count)
         {
             throw new NotImplementedException();
         }

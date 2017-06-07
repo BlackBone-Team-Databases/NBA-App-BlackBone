@@ -1,4 +1,5 @@
-﻿using NbaBlackBone.Models.Contracts;
+﻿using NbaBlackBone.Models;
+using NbaBlackBone.Models.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace NbaBlackBone.Repositories
 {
-    public interface ITeamRepository : IRepository<ITeam>
+    public interface ITeamRepository : IRepository<Team>
     {
-        IEnumerable<ITeam> GetTopTeams(int count);
+        IEnumerable<Team> GetTopTeams(int count);
     }
 }

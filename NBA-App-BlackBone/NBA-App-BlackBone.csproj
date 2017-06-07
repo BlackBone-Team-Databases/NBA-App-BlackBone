@@ -59,6 +59,9 @@
     <Compile Include="Core\Contracts\IWriter.cs" />
     <Compile Include="Core\Providers\ConsoleReaderProvider.cs" />
     <Compile Include="Core\Providers\ConsoleWriterProvider.cs" />
+    <Compile Include="Core\Repositories\IConferenceRepository.cs" />
+    <Compile Include="Core\Repositories\ILeagueRepository.cs" />
+    <Compile Include="Core\Repositories\IPlayerStatisticRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Migrations\201706021325403_InitialCreate.cs" />
     <Compile Include="Migrations\201706021325403_InitialCreate.Designer.cs">
@@ -87,6 +90,11 @@
     <Compile Include="Models\Wnba.cs" />
     <Compile Include="Parsers\JsonParse.cs" />
     <Compile Include="Parsers\TxtParse.cs" />
+    <Compile Include="Persistance\Repositories\ConferenceRepository.cs" />
+    <Compile Include="Persistance\Repositories\DevisionRepository.cs" />
+    <Compile Include="Persistance\Repositories\LeagueRepository.cs" />
+    <Compile Include="Persistance\Repositories\PlayerRepository.cs" />
+    <Compile Include="Persistance\Repositories\PlayerStatisticRepository.cs" />
     <Compile Include="Persistance\Repositories\Repository.cs" />
     <Compile Include="Persistance\Repositories\TeamRepository.cs" />
     <Compile Include="Persistance\UnitOfWork.cs" />
@@ -108,7 +116,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706021325403_InitialCreate.resx">
       <DependentUpon>201706021325403_InitialCreate.cs</DependentUpon>

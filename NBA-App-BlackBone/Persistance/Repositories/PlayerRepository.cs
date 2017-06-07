@@ -11,15 +11,15 @@ using NbaBlackBone.Persistance;
 
 namespace NBABlackBone.Persistance.Repositories
 {
-    public class TeamRepository : Repository<Team>, ITeamRepository
+    class PlayerRepository : Repository<Player>, IPlayerRepository
     {
-        public TeamRepository(NbaContext context) 
+        public PlayerRepository(NbaContext context) 
             : base(context)
         {
 
         }
 
-        public IEnumerable<Team> GetTopTeams(int count)
+        public IEnumerable<Player> GetTopPlayers(int count)
         {
             throw new NotImplementedException();
         }

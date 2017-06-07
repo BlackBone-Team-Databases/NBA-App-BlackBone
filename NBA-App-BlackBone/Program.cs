@@ -21,7 +21,7 @@ namespace NbaBlackBone
             //var writer = new ConsoleWriterProvider();
 
             var x = new TxtParse();
-            x.Parse(@"C:\Users\boda66\Desktop\TeamWork\NBA-App-BlackBone\NBA-App-BlackBone\DataSource\teamstats20120510040.txt");
+            x.Parse(@"..\..\DataSource\teamstats20120510040.txt");
             //x.Parse(@"C:\Users\boda66\Desktop\TeamWork\NBA-App-BlackBone\NBA-App-BlackBone\DataSource\players20120510040.txt");
             //x.Parse(@"C:\Users\boda66\Desktop\TeamWork\NBA-App-BlackBone\NBA-App-BlackBone\DataSource\playerstats20120510040.txt");
 

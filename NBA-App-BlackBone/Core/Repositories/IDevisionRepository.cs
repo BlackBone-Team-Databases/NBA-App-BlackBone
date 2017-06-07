@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace NbaBlackBone.Repositories
 {
-    public interface IDevisionRepository : IRepository<IDevision>
+    public interface IDevisionRepository : IRepository<Devision>
     {
-        IEnumerable<IDevision> GetTopTeamsByDevision(int count);
+        IEnumerable<Devision> GetTopTeamsByDevision(int count);
     }
 }
