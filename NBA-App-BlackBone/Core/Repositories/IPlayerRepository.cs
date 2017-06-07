@@ -1,12 +1,12 @@
-﻿using NBABlackBone.Models;
-using NBABlackBone.Models.Contracts;
+﻿using NbaBlackBone.Models;
+using NbaBlackBone.Models.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NBABlackBone.Persistence
+namespace NbaBlackBone.Repositories
 {
     public interface IPlayerRepository : IRepository<IPlayer>
     {

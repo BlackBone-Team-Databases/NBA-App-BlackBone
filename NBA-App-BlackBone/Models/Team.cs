@@ -1,9 +1,9 @@
-﻿using NBABlackBone.Models.Contracts;
+﻿using NbaBlackBone.Models.Contracts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace NBABlackBone.Models
+namespace NbaBlackBone.Models
 {
     public class Team : ITeam
     {

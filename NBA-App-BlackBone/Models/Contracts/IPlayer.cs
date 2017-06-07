@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NBABlackBone.Models.Contracts
+namespace NbaBlackBone.Models.Contracts
 {
     public interface IPlayer
     {

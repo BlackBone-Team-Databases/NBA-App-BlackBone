@@ -1,6 +1,6 @@
-﻿using NBABlackBone.Core.Contracts;
+﻿using NbaBlackBone.Core.Contracts;
 using System;
-namespace NBABlackBone.Core.Providers
+namespace NbaBlackBone.Core.Providers
 {
     public class ConsoleReaderProvider : IReader
     {

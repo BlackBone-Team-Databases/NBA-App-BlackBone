@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NBABlackBone.Persistence
+namespace NBABlackBone.Persistance.Repositories
 {
-    class ITeamRepository
+    public class TeamRepository
     {
     }
 }

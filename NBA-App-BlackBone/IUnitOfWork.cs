@@ -1,12 +1,20 @@
-﻿using System;
+﻿using NbaBlackBone.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NBABlackBone
+namespace NbaBlackBone
 {
-    class IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
+        ITeamRepository Teams { get; }
+
+        IPlayerRepository Players { get; }
+
+        IDevisionRepository Devisions { get; }
+
+        int Complete();
     }
 }

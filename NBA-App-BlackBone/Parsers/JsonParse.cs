@@ -1,9 +1,9 @@
-﻿using NBABlackBone.Models;
+﻿using NbaBlackBone.Models;
 using System;
 using System.IO;
 using System.Web.Script.Serialization;
 
-namespace NBABlackBone.Parsers
+namespace NbaBlackBone.Parsers
 {
     //neshtata za MS SQL
     class JsonParse
