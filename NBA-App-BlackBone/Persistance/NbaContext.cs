@@ -4,10 +4,10 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NBABlackBone.Models;
-using NBABlackBone.Models.Enums;
+using NbaBlackBone.Models;
+using NbaBlackBone.Models.Enums;
 
-namespace NBABlackBone
+namespace NbaBlackBone.Persistance
 {
     public class NbaContext : DbContext
     {

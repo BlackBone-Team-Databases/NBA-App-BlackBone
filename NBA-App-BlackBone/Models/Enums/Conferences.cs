@@ -1,4 +1,4 @@
-﻿namespace NBABlackBone.Models.Enums
+﻿namespace NbaBlackBone.Models.Enums
 {
     public enum ConferencesEnum
     {

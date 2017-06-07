@@ -1,4 +1,4 @@
-namespace NBABlackBone.Migrations
+namespace NbaBlackBone.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

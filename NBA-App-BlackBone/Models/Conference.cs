@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using NBABlackBone.Models.Enums;
-using NBABlackBone.Models.Contracts;
+using NbaBlackBone.Models.Enums;
+using NbaBlackBone.Models.Contracts;
 
-namespace NBABlackBone.Models
+namespace NbaBlackBone.Models
 {
     public class Conference : IConference
     {

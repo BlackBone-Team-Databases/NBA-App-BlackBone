@@ -1,4 +1,4 @@
-﻿namespace NBABlackBone.Core.Contracts
+﻿namespace NbaBlackBone.Core.Contracts
 {
     /// <summary>
     /// Interface for a source Reader provider

@@ -1,6 +1,6 @@
-﻿using NBABlackBone.Core.Providers;
-using NBABlackBone.Models;
-using NBABlackBone.Parsers;
+﻿using NbaBlackBone.Core.Providers;
+using NbaBlackBone.Models;
+using NbaBlackBone.Parsers;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 
-namespace NBABlackBone
+namespace NbaBlackBone
 {
     class Program
     {

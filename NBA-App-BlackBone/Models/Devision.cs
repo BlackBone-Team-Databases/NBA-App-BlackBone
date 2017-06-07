@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using NBABlackBone.Models;
-using NBABlackBone.Models.Enums;
-using NBABlackBone.Models.Contracts;
+using NbaBlackBone.Models;
+using NbaBlackBone.Models.Enums;
+using NbaBlackBone.Models.Contracts;
 
-namespace NBABlackBone
+namespace NbaBlackBone
 {
 
     public class Devision : IDevision
