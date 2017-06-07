@@ -8,7 +8,7 @@ namespace NBABlackBone.Parsers
 {
     class TxtParse
     {
-        public void Parse(string location)
+        public string[,] Parse(string location)
         {
             int counter = 0;
 
@@ -29,14 +29,14 @@ namespace NBABlackBone.Parsers
 
             file.Close();
 
-            for (int i = 0; i < counter; i++)
+            /*for (int i = 0; i < counter; i++)
              {
                  for (int j = 0; j < arr.GetLength(1); j++)
                  {
                      Console.Write(arr[i, j] + " " );
                  }
                  Console.WriteLine();
-            }
+            }*/
 
             /*for (int j = 0; j < arr.GetLength(1); j++)
             {
@@ -47,6 +47,8 @@ namespace NBABlackBone.Parsers
 
             //Console.WriteLine(arr[0, 1]);
             //Console.WriteLine(arr[1, 1]);
+
+            return arr;
         }
     }
 }
