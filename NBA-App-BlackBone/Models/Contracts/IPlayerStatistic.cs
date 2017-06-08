@@ -18,7 +18,7 @@ namespace NbaBlackBone.Models.Contracts
 
         int SimpleORebFor { get; set; }
 
-        IPlayer Player { get; set; }
+        Player Player { get; set; }
 
         string Url { get; set; }
     }

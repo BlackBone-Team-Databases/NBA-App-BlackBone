@@ -16,9 +16,9 @@ namespace NbaBlackBone.Models.Contracts
 
         float Position { get; set; }
 
-        IPlayerStatistic PlayerStatistic { get; set; }
+        PlayerStatistic PlayerStatistic { get; set; }
 
-        ITeam Team { get; set; }
+        Team Team { get; set; }
 
         string Url { get; set; }
     }

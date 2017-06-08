@@ -1,5 +1,6 @@
 ﻿using NbaBlackBone.Core.Contracts;
 using NbaBlackBone.Persistance;
+using NBABlackBone.Core.Commands;
 using System;
 
 namespace NBABlackBone.Core.Menu
@@ -8,11 +9,13 @@ namespace NBABlackBone.Core.Menu
     {
         private IReader reader;
         private IWriter writer;
+        private ICommandFactory commandFactory;
 
-        public Menu(IReader reader, IWriter writer)
+        public Menu(IReader reader, IWriter writer, ICommandFactory commandFactory)
         {
             this.reader = reader;
             this.writer = writer;
+            this.commandFactory = commandFactory;
         }
 
         public void Start()
@@ -87,22 +90,24 @@ namespace NBABlackBone.Core.Menu
 
         private void CreateCommandMenu(int input)
         {
-            using ( var unitOfWork = new UnitOfWork(new NbaContext()))
-            {
+            //using ( var unitOfWork = new UnitOfWork(new NbaContext()))
+            //{
                 if (input == 1)
                 {
+                    commandFactory.CreatePlayerCommand();
                     // TODO : CreatePlayerCommand(reader, writer, unitOfWork);
                     //unitOfWork.Players.Add()
                 }
                 else if (input == 2)
                 {
+                    commandFactory.CreateTeamCommand();
                     // TODO : CreateTeamCommand(reader, writer, unitOfWork);
                 }
                 else if (input != 3)
                 {
                     writer.WriteLine("Ivalid Value!");
                 }
-            }
+            //}
         }
 
         private void UpdateCommandMenu(int input)

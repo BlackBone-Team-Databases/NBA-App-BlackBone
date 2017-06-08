@@ -14,8 +14,7 @@ namespace NbaBlackBone.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         FirstName = c.String(nullable: false, maxLength: 50),
                         LastName = c.String(maxLength: 50),
-                        PlayerTrueName = c.String(),
-                        Position = c.String(),
+                        Position = c.Single(nullable: false),
                         Url = c.String(),
                         Team_Id = c.Int(),
                     })
@@ -28,9 +27,10 @@ namespace NbaBlackBone.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false),
-                        PPG = c.Int(nullable: false),
-                        PRG = c.Int(nullable: false),
-                        Blocks = c.Int(nullable: false),
+                        Minutes = c.Single(nullable: false),
+                        SimplePossFor = c.Int(nullable: false),
+                        SimplePointsFor = c.Int(nullable: false),
+                        SimpleORebFor = c.Int(nullable: false),
                         Url = c.String(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -43,10 +43,10 @@ namespace NbaBlackBone.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 50),
-                        Minutes = c.Int(nullable: false),
-                        OffRtg = c.String(),
-                        DeffRtg = c.String(),
-                        OverallRtg = c.Int(nullable: false),
+                        Minutes = c.Single(nullable: false),
+                        OffRtg = c.Single(nullable: false),
+                        DeffRtg = c.Single(nullable: false),
+                        OverallRtg = c.Single(nullable: false),
                         Url = c.String(),
                         Devision_Id = c.Int(),
                     })

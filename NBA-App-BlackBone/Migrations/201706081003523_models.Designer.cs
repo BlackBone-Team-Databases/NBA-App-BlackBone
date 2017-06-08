@@ -13,7 +13,7 @@ namespace NbaBlackBone.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201706060837534_models"; }
+            get { return "201706081003523_models"; }
         }
         
         string IMigrationMetadata.Source

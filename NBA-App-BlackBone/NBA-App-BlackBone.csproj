@@ -55,6 +55,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Commands\CommandFactory.cs" />
+    <Compile Include="Core\Commands\ICommandFactory.cs" />
     <Compile Include="Core\Contracts\IReader.cs" />
     <Compile Include="Core\Contracts\IWriter.cs" />
     <Compile Include="Core\Menu\ConsoleReadProvider.cs" />
@@ -73,13 +75,9 @@
     <Compile Include="Migrations\201706021325403_InitialCreate.Designer.cs">
       <DependentUpon>201706021325403_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706060837534_models.cs" />
-    <Compile Include="Migrations\201706060837534_models.Designer.cs">
-      <DependentUpon>201706060837534_models.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706061020393_ss.cs" />
-    <Compile Include="Migrations\201706061020393_ss.Designer.cs">
-      <DependentUpon>201706061020393_ss.cs</DependentUpon>
+    <Compile Include="Migrations\201706081003523_models.cs" />
+    <Compile Include="Migrations\201706081003523_models.Designer.cs">
+      <DependentUpon>201706081003523_models.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Conference.cs" />
@@ -129,11 +127,8 @@
     <EmbeddedResource Include="Migrations\201706021325403_InitialCreate.resx">
       <DependentUpon>201706021325403_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706060837534_models.resx">
-      <DependentUpon>201706060837534_models.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706061020393_ss.resx">
-      <DependentUpon>201706061020393_ss.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706081003523_models.resx">
+      <DependentUpon>201706081003523_models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

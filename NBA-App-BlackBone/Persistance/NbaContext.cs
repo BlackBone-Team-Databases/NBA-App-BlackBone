@@ -17,10 +17,10 @@ namespace NbaBlackBone.Persistance
         {
 
         }
-        public IDbSet<IPlayer> Players { get; set; }
+        public IDbSet<Player> Players { get; set; }
 
-        public IDbSet<ITeam> Teams { get; set; }
+        public IDbSet<Team> Teams { get; set; }
 
-        public IDbSet<IPlayerStatistic> PlayerStatistics { get; set; }
+        public IDbSet<PlayerStatistic> PlayerStatistics { get; set; }
     }
 }

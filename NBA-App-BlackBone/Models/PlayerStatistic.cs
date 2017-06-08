@@ -22,7 +22,7 @@ namespace NbaBlackBone.Models
 
         public int SimpleORebFor { get; set; }
 
-        public virtual IPlayer Player { get; set; }
+        public virtual Player Player { get; set; }
 
         public string Url { get; set; }
 
