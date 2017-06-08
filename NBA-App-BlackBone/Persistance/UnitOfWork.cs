@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NbaBlackBone.Repositories;
 using NBABlackBone.Core.Repositories;
+using NBABlackBone.Persistance.Repositories;
 
 namespace NbaBlackBone.Persistance
 {
@@ -15,6 +16,7 @@ namespace NbaBlackBone.Persistance
         public UnitOfWork(NbaContext context)
         {
             this.context = context;
+            this.Players = new PlayerRepository(context);
         }
 
         public IDevisionRepository Devisions { get; private set; }

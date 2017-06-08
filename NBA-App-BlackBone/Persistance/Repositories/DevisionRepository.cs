@@ -6,12 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using NbaBlackBone.Repositories;
+using NbaBlackBone.Persistance;
 
 namespace NBABlackBone.Persistance.Repositories
 {
     public class DevisionRepository : Repository<Devision>, IDevisionRepository
     {
-        public DevisionRepository(DbContext context) : base(context)
+        public DevisionRepository(NbaContext context) : base(context)
         {
         }
 

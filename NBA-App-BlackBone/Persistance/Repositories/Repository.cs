@@ -6,14 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq.Expressions;
 using System.Data.Entity;
+using NbaBlackBone.Persistance;
 
 namespace NBABlackBone.Persistance.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        protected readonly DbContext context;
+        protected readonly NbaContext context;
 
-        public Repository(DbContext context)
+        public Repository(NbaContext context)
         {
             this.context = context;
         }
