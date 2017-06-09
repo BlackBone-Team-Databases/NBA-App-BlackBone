@@ -21,20 +21,20 @@
 	{
 		"Conference": "Eastern",
 		"Teams": [
-			"Golden State Woriors",
-			"San Antonio Spurs",
-			"Houston Rockets",
-			"LA Clippers",
-			"Utah Jazz",
-			"Oklahoma City",
-			"Memphis Grizzlez",
-			"Denver Nugerts",
-			"New Orleans",
-			"Dallas Mavericks",
-			"Sacramento",
-			"Minnesota",
-			"LA Lakers",
-			"Phoenix"
+			{"Name":"Golden State Woriors"},
+			{"Name":"San Antonio Spurs"},
+			{"Name":"Houston Rockets"},
+			{"Name":"LA Clippers"},
+			{"Name":"Utah Jazz"},
+			{"Name":"Oklahoma City"},
+			{"Name":"Memphis Grizzlez"},
+			{"Name":"Denver Nugerts"},
+			{"Name":"New Orleans"},
+			{"Name":"Dallas Mavericks"},
+			{"Name":"Sacramento"},
+			{"Name":"Minnesota"},
+			{"Name":"LA Lakers"},
+			{"Name":"Phoenix"}
 		]
 	}
 ]

@@ -9,12 +9,17 @@ using NbaBlackBone.Models.Enums;
 
 namespace NBABlackBone.Models
 {
-    class Standings : IStandings
+    public class Standings : IStandings
     {
+        public Standings()
+        {
+
+        }
+
         public int Id { get; set; }
 
         public ConferencesEnum ConferenceEnum { get; set; }
 
-        public virtual ICollection<string> Teams { get; set; }
+        public virtual ICollection<Team> Teams { get; set; }
     }
 }

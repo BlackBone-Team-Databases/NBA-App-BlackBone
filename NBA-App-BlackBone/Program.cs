@@ -2,23 +2,26 @@
 using NbaBlackBone.Parsers;
 using NBABlackBone.Core.Commands;
 using NBABlackBone.Core.Menu;
+using NBABlackBone.Models;
 using NBABlackBone.Parsers;
+using System.Collections.Generic;
 
 namespace NbaBlackBone
 {
-    class Program
+    public class Program
     {
-        static void Main()
+        public static void Main()
         {
+            var parse = new Json();
+            ICollection<Standings> standings = parse.ParseStandings();
 
-            Json.Parse();
 
-            //var reader = new ConsoleReaderProvider();
-            //var writer = new ConsoleWriterProvider();
-            //var commandFactory = new CommandFactory(reader, writer);
+            var reader = new ConsoleReaderProvider();
+            var writer = new ConsoleWriterProvider();
+            var commandFactory = new CommandFactory(reader, writer);
 
-            //var menu = new Menu(reader, writer, commandFactory);
-            //menu.Start();
+            var menu = new Menu(reader, writer, commandFactory);
+            menu.Start();
         }
     }
 }

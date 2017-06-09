@@ -14,6 +14,6 @@ namespace NBABlackBone.Models.Contracts
 
         ConferencesEnum ConferenceEnum { get; set; }
 
-        ICollection<string> Teams { get; set; }
+        ICollection<Team> Teams { get; set; }
     }
 }

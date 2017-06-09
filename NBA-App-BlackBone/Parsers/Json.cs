@@ -10,9 +10,45 @@ namespace NbaBlackBone.Parsers
     //neshtata za MS SQL
     public class Json
     {
-        public static void Parse()
+        public void TeamParse(string text)
         {
-            string jsonPath = @"../../DataSource/standings-min.json";
+            string json;
+            using (StreamReader r = new StreamReader(text))
+            {
+                json = r.ReadToEnd();
+            }
+            var serializer = new JavaScriptSerializer();
+
+            var myteam = serializer.Deserialize<Team>(json);
+        }
+
+        public void PlayerParse(string text)
+        {
+            string json;
+            using (StreamReader r = new StreamReader(text))
+            {
+                json = r.ReadToEnd();
+            }
+            var serializer = new JavaScriptSerializer();
+
+            var myteam = serializer.Deserialize<Player>(json);
+        }
+
+        public void PlayerStatsticParse(string text)
+        {
+            string json;
+            using (StreamReader r = new StreamReader(text))
+            {
+                json = r.ReadToEnd();
+            }
+            var serializer = new JavaScriptSerializer();
+
+            var myteam = serializer.Deserialize<PlayerStatistic>(json);
+        }
+
+        public  ICollection<Standings> ParseStandings()
+        {
+            string jsonPath = @"../../DataSource/standings-min1.json";
             string json;
             using (StreamReader reader = new StreamReader(jsonPath))
             {
@@ -20,8 +56,9 @@ namespace NbaBlackBone.Parsers
             }
 
             var serializer = new JavaScriptSerializer();
-            List<Standings> ser = (List<Standings>)serializer.Deserialize(json, typeof(List<Standings>));
-            Console.WriteLine(ser);
+            var standingsCollection = (ICollection<Standings>)serializer.Deserialize(json, typeof(ICollection<Standings>));
+
+            return standingsCollection;
         }
     }
 }
