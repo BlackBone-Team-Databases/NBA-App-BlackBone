@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace NBABlackBone.Parsers
 {
-    public class PlayerStatsToIEnumerable
+    public class JsonParser
     {
         ICollection<IPlayerStatistic> playersStatsCollection;
 
-        public PlayerStatsToIEnumerable()
+        public JsonParser()
         {
             this.playersStatsCollection = new List<IPlayerStatistic>();
         }
@@ -43,6 +43,7 @@ namespace NBABlackBone.Parsers
                 };
 
                 playersStatsCollection.Add(playerStats);
+                Console.WriteLine();
             }
 
             //foreach (var playerStats in playersStatsCollection)

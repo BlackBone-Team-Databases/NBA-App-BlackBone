@@ -86,13 +86,15 @@
     <Compile Include="Models\Contracts\ILeague.cs" />
     <Compile Include="Models\Contracts\IPlayer.cs" />
     <Compile Include="Models\Contracts\IPlayerStatistic.cs" />
+    <Compile Include="Models\Contracts\IStandings.cs" />
     <Compile Include="Models\Contracts\ITeam.cs" />
     <Compile Include="Models\Enums\Conferences.cs" />
     <Compile Include="Models\Enums\Devisions.cs" />
     <Compile Include="Models\Enums\Leagues.cs" />
     <Compile Include="Models\Nba.cs" />
+    <Compile Include="Models\Stangings.cs" />
     <Compile Include="Models\Wnba.cs" />
-    <Compile Include="Parsers\JsonParse.cs" />
+    <Compile Include="Parsers\Json.cs" />
     <Compile Include="Parsers\PlayerStatsToIEnumerable.cs" />
     <Compile Include="Parsers\PlayersToIEnumerable.cs" />
     <Compile Include="Parsers\TeamsToIEnumerable.cs" />

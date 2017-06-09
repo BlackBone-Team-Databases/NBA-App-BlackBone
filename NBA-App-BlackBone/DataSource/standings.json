@@ -1,0 +1,40 @@
+[
+	{
+		"Conference": "Eastern",
+		"Teams": [
+			{"Name":"Boston Celtics"},
+			{"Name":"Cleveland"},
+			{"Name":"Toronto Raptors"},
+			{"Name":"Washington Wizards"},
+			{"Name":"Atlanta Hawks"},
+			{"Name":"Milwaukee Bucks"},
+			{"Name":"Indiana"},
+			{"Name":"Chicago"},
+			{"Name":"Miami"},
+			{"Name":"Detroit"},
+			{"Name":"Charlote"},
+			{"Name":"New York"},
+			{"Name":"Orlando"},
+			{"Name":"Brooklyn"}
+		]
+	},
+	{
+		"Conference": "Eastern",
+		"Teams": [
+			"Golden State Woriors",
+			"San Antonio Spurs",
+			"Houston Rockets",
+			"LA Clippers",
+			"Utah Jazz",
+			"Oklahoma City",
+			"Memphis Grizzlez",
+			"Denver Nugerts",
+			"New Orleans",
+			"Dallas Mavericks",
+			"Sacramento",
+			"Minnesota",
+			"LA Lakers",
+			"Phoenix"
+		]
+	}
+]

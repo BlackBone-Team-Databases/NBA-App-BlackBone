@@ -7,10 +7,6 @@ namespace NbaBlackBone.Models
 {
     public class Team : ITeam
     {
-        public Team()
-        {
-
-        }
 
         public int Id { get; set; }
 
