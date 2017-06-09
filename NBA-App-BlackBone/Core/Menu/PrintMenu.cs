@@ -27,10 +27,12 @@ namespace NBABlackBone.Core.Menu
         public static void ReadMenu()
         {
             Console.WriteLine("Choose what to read:");
-            Console.WriteLine("1. Read Player");
-            Console.WriteLine("2. Read Team");
-            Console.WriteLine("3. Read Player Stats");
-            Console.WriteLine("4. Back");
+            Console.WriteLine("1. Read All Players");
+            Console.WriteLine("2. Read Player by ID");
+            Console.WriteLine("3. Read All Teams");
+            Console.WriteLine("4. Read Team by ID");
+            Console.WriteLine("5. Read Player Stats by ID");
+            Console.WriteLine("6. Back");
         }
 
         public static void UpdateMenu()

@@ -15,5 +15,10 @@ namespace NBABlackBone.Persistance.Repositories
         public PlayerStatisticRepository(NbaContext context) : base(context)
         {
         }
+
+        public NbaContext NbaContext
+        {
+            get { return context as NbaContext; }
+        }
     }
 }
