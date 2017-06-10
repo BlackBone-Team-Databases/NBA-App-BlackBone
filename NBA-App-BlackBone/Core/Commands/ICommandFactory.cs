@@ -22,5 +22,15 @@ namespace NBABlackBone.Core.Commands
         void ReadTeamByIDCommand();
 
         void ReadPlayerStatisticByIDCommand();
+
+        void DeletePlayerCommand();
+
+        void DeleteTeamCommand();
+
+        void UpdatePlayerCommand();
+
+        void UpdateTeamCommand();
+
+        void UpdatePlayerStatisticCommand();
     }
 }

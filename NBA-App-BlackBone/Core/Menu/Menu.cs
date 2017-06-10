@@ -110,15 +110,15 @@ namespace NBABlackBone.Core.Menu
         {
             if (input == 1)
             {
-                // TODO : UpdatePlayerCommand();
+                commandFactory.UpdatePlayerCommand();
             }
             else if (input == 2)
             {
-                // TODO : UpdateTeamCommand();
+                commandFactory.UpdateTeamCommand();
             }
             else if (input == 3)
             {
-                // TODO : UpdatePlayerStatisticCommand();
+                commandFactory.UpdatePlayerStatisticCommand();
             }
             else if (input != 4)
             {
@@ -159,11 +159,11 @@ namespace NBABlackBone.Core.Menu
         {
             if (input == 1)
             {
-                // TODO : DeletePlayerCommand();
+                commandFactory.DeletePlayerCommand();
             }
             else if (input == 2)
             {
-                // TODO : DeleteTeamCommand();
+                commandFactory.DeleteTeamCommand();
             }
             else if (input != 3)
             {
