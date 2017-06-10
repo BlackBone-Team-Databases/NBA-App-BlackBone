@@ -60,5 +60,20 @@ namespace NbaBlackBone.Parsers
 
             return standingsCollection;
         }
+
+        public ICollection<Schedule> ParseSchedule()
+        {
+            string jsonPath = @"../../DataSource/schedule.json";
+            string json;
+            using (StreamReader reader = new StreamReader(jsonPath))
+            {
+                json = reader.ReadToEnd();
+            }
+
+            var serializer = new JavaScriptSerializer();
+            var scheduleCollection = (ICollection<Schedule>)serializer.Deserialize(json, typeof(ICollection<Schedule>));
+
+            return scheduleCollection;
+        }
     }
 }

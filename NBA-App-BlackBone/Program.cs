@@ -13,7 +13,7 @@ namespace NbaBlackBone
         public static void Main()
         {
             var parse = new Json();
-            ICollection<Standings> standings = parse.ParseStandings();
+            ICollection<Schedule> standings = parse.ParseSchedule();
 
 
             var reader = new ConsoleReaderProvider();

@@ -1,0 +1,162 @@
+[
+    {
+        "Date": {
+            "Day": "1",
+            "Month": "5",
+            "Year": "2017"
+        },
+        "TeamAttendance": [
+            {
+                "Name": "Toronto Raptors",
+                "Score": "105",
+                "HomeOrAway": "Away"
+            },
+            {
+                "Name": "Cleveland Cavaliers",
+                "Score": "116",
+                "HomeOrAway": "Home"
+            }
+        ],
+        "Arena": "Quicken Loans Arena"
+    },
+    {
+        "Date": {
+            "Day": "1",
+            "Month": "5",
+            "Year": "2017"
+        },
+        "TeamAttendance": [
+            {
+                "Name": "Houston Rockets",
+                "Score": "126",
+                "HomeOrAway": "Away"
+            },
+            {
+                "Name": "San Antonio Spurs",
+                "Score": "99",
+                "HomeOrAway": "Home"
+            }
+        ],
+        "Arena": "AT&T Center"
+    },
+    {
+        "Date": {
+            "Day": "2",
+            "Month": "5",
+            "Year": "2017"
+        },
+        "TeamAttendance": [
+            {
+                "Name": "Washington Wizards",
+                "Score": "119",
+                "HomeOrAway": "Away"
+            },
+            {
+                "Name": "Boston Celtics",
+                "Score": "129",
+                "HomeOrAway": "Home"
+            }
+        ],
+        "Arena": "TD Garden"
+    },
+    {
+        "Date": {
+            "Day": "2",
+            "Month": "5",
+            "Year": "2017"
+        },
+        "TeamAttendance": [
+            {
+                "Name": "Utah Jazz",
+                "Score": "94",
+                "HomeOrAway": "Away"
+            },
+            {
+                "Name": "Golden State Warriors",
+                "Score": "106",
+                "HomeOrAway": "Home"
+            }
+        ],
+        "Arena": "ORACLE Arena"
+    },
+    {
+        "Date": {
+            "Day": "3",
+            "Month": "5",
+            "Year": "2017"
+        },
+        "TeamAttendance": [
+            {
+                "Name": "Toronto Raptors",
+                "Score": "103",
+                "HomeOrAway": "Away"
+            },
+            {
+                "Name": "Cleveland Cavaliers",
+                "Score": "125",
+                "HomeOrAway": "Home"
+            }
+        ],
+        "Arena": "Quicken Loans Arena"
+    },
+    {
+        "Date": {
+            "Day": "3",
+            "Month": "5",
+            "Year": "2017"
+        },
+        "TeamAttendance": [
+            {
+                "Name": "Houston Rockets",
+                "Score": "96",
+                "HomeOrAway": "Away"
+            },
+            {
+                "Name": "San Antonio Spurs",
+                "Score": "121",
+                "HomeOrAway": "Home"
+            }
+        ],
+        "Arena": "AT&T Center"
+    },
+    {
+        "Date": {
+            "Day": "4",
+            "Month": "5",
+            "Year": "2017"
+        },
+        "TeamAttendance": [
+            {
+                "Name": "Boston Celtics",
+                "Score": "89",
+                "HomeOrAway": "Away"
+            },
+            {
+                "Name": "Washington Wizards",
+                "Score": "116",
+                "HomeOrAway": "Home"
+            }
+        ],
+        "Arena": "Verizon Centerr"
+    },
+    {
+        "Date": {
+            "Day": "4",
+            "Month": "5",
+            "Year": "2017"
+        },
+        "TeamAttendance": [
+            {
+                "Name": "Utah Jazz",
+                "Score": "104",
+                "HomeOrAway": "Away"
+            },
+            {
+                "Name": "Golden State Warriors",
+                "Score": "115",
+                "HomeOrAway": "Home"
+            }
+        ],
+        "Arena": "ORACLE Arena"
+    }
+]
