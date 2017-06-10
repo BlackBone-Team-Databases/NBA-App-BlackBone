@@ -9,9 +9,9 @@ using NbaBlackBone.Models.Enums;
 
 namespace NBABlackBone.Models
 {
-    public class Standings : IStandings
+    public class Standing : IStanding
     {
-        public Standings()
+        public Standing()
         {
 
         }

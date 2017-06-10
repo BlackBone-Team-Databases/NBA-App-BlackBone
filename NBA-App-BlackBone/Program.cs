@@ -19,8 +19,8 @@ namespace NbaBlackBone
             //var x = new PlayerStatsToIEnumerable();
             //x.Cast();
 
-            //var parse = new Json();
-            //ICollection<Standings> standings = parse.ParseStandings();
+            var parse = new Json();
+            ICollection<Standing> standings = parse.ParseStanding();
 
             //var menu = new Menu(reader, writer, commandFactory);
             //menu.Start();

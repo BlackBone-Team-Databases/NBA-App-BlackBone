@@ -46,7 +46,7 @@ namespace NbaBlackBone.Parsers
             var myteam = serializer.Deserialize<PlayerStatistic>(json);
         }
 
-        public ICollection<Standings> ParseStandings()
+        public ICollection<Standing> ParseStanding()
         {
             string jsonPath = @"../../DataSource/standings-min1.json";
             string json;
@@ -56,7 +56,7 @@ namespace NbaBlackBone.Parsers
             }
 
             var serializer = new JavaScriptSerializer();
-            var standingsCollection = (ICollection<Standings>)serializer.Deserialize(json, typeof(ICollection<Standings>));
+            var standingsCollection = (ICollection<Standing>)serializer.Deserialize(json, typeof(ICollection<Standing>));
 
             return standingsCollection;
         }

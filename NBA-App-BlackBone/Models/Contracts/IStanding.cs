@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NBABlackBone.Models.Contracts
 {
-    public interface IStandings
+    public interface IStanding
     {
         int Id { get; set; }
 
