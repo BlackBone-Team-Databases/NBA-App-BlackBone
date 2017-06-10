@@ -1,14 +1,16 @@
 ﻿using NbaBlackBone.Models;
+using NBABlackBone.Models;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Web.Script.Serialization;
 
 namespace NbaBlackBone.Parsers
 {
     //neshtata za MS SQL
-    class JsonParse
+    public class Json
     {
-       public void TeamParse(string text)
+        public void TeamParse(string text)
         {
             string json;
             using (StreamReader r = new StreamReader(text))
@@ -42,6 +44,21 @@ namespace NbaBlackBone.Parsers
             var serializer = new JavaScriptSerializer();
 
             var myteam = serializer.Deserialize<PlayerStatistic>(json);
+        }
+
+        public ICollection<Standings> ParseStandings()
+        {
+            string jsonPath = @"../../DataSource/standings-min1.json";
+            string json;
+            using (StreamReader reader = new StreamReader(jsonPath))
+            {
+                json = reader.ReadToEnd();
+            }
+
+            var serializer = new JavaScriptSerializer();
+            var standingsCollection = (ICollection<Standings>)serializer.Deserialize(json, typeof(ICollection<Standings>));
+
+            return standingsCollection;
         }
     }
 }
