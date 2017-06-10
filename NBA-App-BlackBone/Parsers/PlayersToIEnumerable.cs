@@ -14,7 +14,7 @@ namespace NBABlackBone.Parsers
 
         public PlayersToIEnumerable()
         {
-            this.playersColection = new List<IPlayer>();
+            this.playersColection = new HashSet<IPlayer>();
         }
 
         public void Cast()
