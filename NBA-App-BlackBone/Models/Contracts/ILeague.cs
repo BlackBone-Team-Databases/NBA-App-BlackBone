@@ -9,7 +9,7 @@ namespace NbaBlackBone.Models.Contracts
 {
     public interface ILeague
     {
-        string Id { get; set; }
+        int Id { get; set; }
 
         LeaguesEnum LeagueEnum { get; set; }
 

@@ -6,9 +6,9 @@ namespace NBABlackBone.MigrationsSQLite
     using System.Data.SQLite.EF6.Migrations;
     using System.Linq;
 
-    internal sealed class ConfigurationAwesome : DbMigrationsConfiguration<NBABlackBone.SQLite.StandingsDbContext>
+    internal sealed class ConfigurationSqlite : DbMigrationsConfiguration<NBABlackBone.SQLite.StandingsDbContext>
     {
-        public ConfigurationAwesome()
+        public ConfigurationSqlite()
         {
             AutomaticMigrationsEnabled = false;
             MigrationsDirectory = @"MigrationsSQLite";

@@ -13,7 +13,7 @@ namespace NBABlackBone.SQLite
     {
         public StandingsDbContext() : base("SqliteDb")
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<StandingsDbContext, ConfigurationAwesome>(true));
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<StandingsDbContext, ConfigurationSqlite>(true));
         }
 
         public IDbSet<Standing> Standings { get; set; }

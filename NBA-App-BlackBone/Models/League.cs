@@ -11,7 +11,7 @@ namespace NbaBlackBone.Models
         {
 
         }
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         public LeaguesEnum LeagueEnum { get; set; }
 

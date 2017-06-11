@@ -9,7 +9,7 @@ namespace NbaBlackBone.Models.Contracts
 {
     public interface IConference
     {
-        string Id { get; set; }
+        int Id { get; set; }
 
         ConferencesEnum ConferenceEnum { get; set; }
 

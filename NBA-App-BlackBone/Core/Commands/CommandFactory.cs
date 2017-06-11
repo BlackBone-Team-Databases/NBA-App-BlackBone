@@ -5,7 +5,11 @@ using NbaBlackBone.Models.Contracts;
 using NbaBlackBone.Models.Enums;
 using NbaBlackBone.Parsers;
 using NbaBlackBone.Persistance;
+using NBABlackBone.Models;
+using NBABlackBone.MsSQL;
 using NBABlackBone.Parsers;
+using NBABlackBone.Postgre;
+using NBABlackBone.SQLite;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -415,58 +419,23 @@ namespace NBABlackBone.Core.Commands
 
         public void FillDataBase()
         {
-            using (var unitOfWork = new UnitOfWork(new NbaContext()))
-            {
+            //Fill MsSQL
+            var fillMssql = new FillMsSQL();
+            fillMssql.Fill();
 
-                var TeamParser = new TeamsToIEnumerable();
-                var PlayersParser = new PlayersToIEnumerable();
-                var PlayerStatisticParser = new JsonParser();
+            //Fill Postgre
+            var parseSched = new Json();
+            ICollection<Schedule> schedules = parseSched.ParseSchedule();
 
-                var Teams = TeamParser.Cast();
-                var Players = PlayersParser.Cast();
-                var PS = PlayerStatisticParser.Cast();
+            var fillPostgre = new FillPostgre();
+            fillPostgre.Fill(schedules);
 
-                for (int i = 0; i < Players.Count; i++)
-                {
-                    Players.ElementAt(i).PlayerStatistic = PS.ElementAt(i);
-                    PS.ElementAt(i).Player = Players.ElementAt(i);
-                    
-                }
+            //Fill SQLite
+            var parse = new Json();
+            ICollection<Standing> standings = parse.ParseStanding();
 
-
-                /*ICollection<League> Leagues = new List<League>();
-                Leagues.Add(new League() { LeagueEnum = LeaguesEnum.NBA });
-                Leagues.Add(new League() { LeagueEnum = LeaguesEnum.WNBA });*/
-
-                /*ICollection<Conference> Conferences = new List<Conference>();
-                Conferences.Add(new Conference() { ConferenceEnum = ConferencesEnum.Eastern });
-                Conferences.Add(new Conference() { ConferenceEnum = ConferencesEnum.Western });*/
-
-                
-
-                ICollection<Devision> Devisions = new  List<Devision>();
-                Devisions.Add(new Devision() { DevisionEnum = DevisionsEnum.ATLANTIC });
-                Devisions.Add(new Devision() { DevisionEnum = DevisionsEnum.CENTRAL });
-                Devisions.Add(new Devision() { DevisionEnum = DevisionsEnum.TEAMSNORTHWEST });
-                Devisions.Add(new Devision() { DevisionEnum = DevisionsEnum.TEAMSPACIFIC });
-                Devisions.Add(new Devision() { DevisionEnum = DevisionsEnum.TEAMSSOUTHEAST });
-                Devisions.Add(new Devision() { DevisionEnum = DevisionsEnum.TEAMSSOUTHWEST });
-
-
-                //unitOfWork.League.AddRange(Leagues);
-
-                //unitOfWork.Conference.AddRange(Conferences);
-
-                unitOfWork.Devisions.AddRange(Devisions);
-
-                unitOfWork.Players.AddRange(Players);
-               
-                unitOfWork.Teams.AddRange(Teams);
-                
-                unitOfWork.PlayerStatistic.AddRange(PS);
-
-                unitOfWork.Complete();
-            }
+            var fillSQLite = new FillSQLite();
+            fillSQLite.Fill(standings);
         }
     }    
 }

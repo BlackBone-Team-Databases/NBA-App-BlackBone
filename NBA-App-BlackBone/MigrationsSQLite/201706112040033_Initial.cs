@@ -43,7 +43,7 @@ namespace NBABlackBone.MigrationsSQLite
                         Id = c.Int(nullable: false, identity: true),
                         DevisionEnum = c.Int(nullable: false),
                         Url = c.String(maxLength: 2147483647),
-                        Conference_Id = c.String(maxLength: 128),
+                        Conference_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Conferences", t => t.Conference_Id)
@@ -53,10 +53,10 @@ namespace NBABlackBone.MigrationsSQLite
                 "dbo.Conferences",
                 c => new
                     {
-                        Id = c.String(nullable: false, maxLength: 128),
+                        Id = c.Int(nullable: false, identity: true),
                         ConferenceEnum = c.Int(nullable: false),
                         Url = c.String(maxLength: 2147483647),
-                        League_Id = c.String(maxLength: 128),
+                        League_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Leagues", t => t.League_Id)
@@ -66,7 +66,7 @@ namespace NBABlackBone.MigrationsSQLite
                 "dbo.Leagues",
                 c => new
                     {
-                        Id = c.String(nullable: false, maxLength: 128),
+                        Id = c.Int(nullable: false, identity: true),
                         LeagueEnum = c.Int(nullable: false),
                         Url = c.String(maxLength: 2147483647),
                     })
