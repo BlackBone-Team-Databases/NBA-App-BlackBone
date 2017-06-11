@@ -12,7 +12,8 @@ namespace NbaBlackBone
             var reader = new ConsoleReaderProvider();
             var writer = new ConsoleWriterProvider();
             var commandFactory = new CommandFactory(reader, writer);
-            /*var x = new PlayerStatsToIEnumerable();
+
+            /*var x = new PlayersToIEnumerable();
             x.Cast();*/
 
             var menu = new Menu(reader, writer, commandFactory);

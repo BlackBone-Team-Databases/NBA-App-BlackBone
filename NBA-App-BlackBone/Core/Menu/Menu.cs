@@ -20,7 +20,7 @@ namespace NBABlackBone.Core.Menu
 
         public void Start()
         {
-            int input = 6;
+            int input = 7;
             while (input != 0)
             {
                 PrintMenu.MainMenu();
@@ -53,6 +53,9 @@ namespace NBABlackBone.Core.Menu
                         break;
                     case 5:
                         // TODO : GenerateReportCommand()
+                        break;
+                    case 6:
+                        commandFactory.FillDataBase();
                         break;
                     case 0:
                         Environment.Exit(0);

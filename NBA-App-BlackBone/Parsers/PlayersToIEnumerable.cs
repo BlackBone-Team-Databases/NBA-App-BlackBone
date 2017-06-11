@@ -2,6 +2,7 @@
 using NbaBlackBone.Models.Contracts;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace NBABlackBone.Parsers
             this.playersColection = new List<IPlayer>();
         }
 
-        public void Cast()
+        public ICollection<IPlayer> Cast()
         {
             var x = new TxtParse();
             string[,] array = x.Parse(@"..\..\DataSource\players20120510040.txt");
@@ -28,27 +29,24 @@ namespace NBABlackBone.Parsers
 
 
 
-            for (int index = 1; index < array.GetLength(0); index++)
+            for (int index = 2; index < array.GetLength(0); index++)
             {
                 if (string.IsNullOrEmpty(array[index, 0]))
                 {
                     break;
                 }
-                var player = new Player()
-                {
-                    FirstName = array[index, name],
-                    LastName = array[index, lastName],
-                    Position = float.Parse(array[index, position])
+                var player = new Player();
 
-                };
+                player.FirstName = array[index, name];
+                player.LastName = array[index, lastName];
+                player.Position = float.Parse(array[index, position], CultureInfo.InvariantCulture);
+
+               
 
                 playersColection.Add(player);
             }
 
-            foreach (var player in playersColection)
-            {
-                Console.WriteLine(player.ToString());
-            }
+            return playersColection;
         }
     }
 }

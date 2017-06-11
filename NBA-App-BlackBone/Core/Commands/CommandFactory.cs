@@ -3,6 +3,7 @@ using NbaBlackBone.Core.Contracts;
 using NbaBlackBone.Models;
 using NbaBlackBone.Models.Enums;
 using NbaBlackBone.Persistance;
+using NBABlackBone.Parsers;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -408,6 +409,21 @@ namespace NBABlackBone.Core.Commands
                 }
 
             }
+        }
+
+        public void FillDataBase()
+        {
+
+            //var Parser = new TeamsToIEnumerable();
+            //var Parser = new PlayersToIEnumerable();
+            var Parser = new PlayerStatsToIEnumerable();
+            var Collection =  Parser.Cast();
+
+            foreach (var collection in Collection)
+            {
+                Console.WriteLine(collection.ToString());
+            }
+
         }
     }    
 }

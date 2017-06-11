@@ -2,6 +2,7 @@
 using NbaBlackBone.Models.Contracts;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace NBABlackBone.Parsers
             this.playersStatsCollection = new List<IPlayerStatistic>();
         }
 
-        public void Cast()
+        public ICollection<IPlayerStatistic> Cast()
         {
             string path = @"..\..\DataSource\playerstats20120510040.txt";
             var x = new TxtParse();
@@ -36,19 +37,16 @@ namespace NBABlackBone.Parsers
                 }
                 var playerStats = new PlayerStatistic()
                 {
-                    Minutes = float.Parse(array[index, min]),
-                    SimplePossFor = int.Parse(array[index, SpossF]),
-                    SimplePointsFor = int.Parse(array[index, SpointsF]),
-                    SimpleORebFor = int.Parse(array[index, SorebF])
+                    Minutes = float.Parse(array[index, min], CultureInfo.InvariantCulture),
+                    SimplePossFor = int.Parse(array[index, SpossF], CultureInfo.InvariantCulture),
+                    SimplePointsFor = int.Parse(array[index, SpointsF], CultureInfo.InvariantCulture),
+                    SimpleORebFor = int.Parse(array[index, SorebF], CultureInfo.InvariantCulture)
                 };
 
                 playersStatsCollection.Add(playerStats);
             }
 
-            //foreach (var playerStats in playersStatsCollection)
-            //{
-            //    Console.WriteLine(playerStats.ToString());
-            //}
+            return playersStatsCollection;
         }
     }
 }

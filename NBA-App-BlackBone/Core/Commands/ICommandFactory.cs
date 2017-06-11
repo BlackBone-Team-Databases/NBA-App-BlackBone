@@ -32,5 +32,7 @@ namespace NBABlackBone.Core.Commands
         void UpdateTeamCommand();
 
         void UpdatePlayerStatisticCommand();
+
+        void FillDataBase();
     }
 }
