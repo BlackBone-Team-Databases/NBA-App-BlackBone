@@ -47,6 +47,7 @@ namespace NBABlackBone.Persistance.Repositories
         public void Remove(TEntity entity)
         {
             context.Set<TEntity>().Remove(entity);
+            
         }
 
         public void RemoveRange(IEnumerable<TEntity> entities)
@@ -57,6 +58,11 @@ namespace NBABlackBone.Persistance.Repositories
         public TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate)
         {
             throw new NotImplementedException();
+        }
+
+        public void Attach(TEntity entity)
+        {
+            context.Set<TEntity>().Attach(entity);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace NBABlackBone.Core.Menu
 
         public void Start()
         {
-            int input = 6;
+            int input = 7;
             while (input != 0)
             {
                 PrintMenu.MainMenu();
@@ -53,6 +53,9 @@ namespace NBABlackBone.Core.Menu
                         break;
                     case 5:
                         // TODO : GenerateReportCommand()
+                        break;
+                    case 6:
+                        commandFactory.FillDataBase();
                         break;
                     case 0:
                         Environment.Exit(0);
@@ -110,15 +113,15 @@ namespace NBABlackBone.Core.Menu
         {
             if (input == 1)
             {
-                // TODO : UpdatePlayerCommand();
+                commandFactory.UpdatePlayerCommand();
             }
             else if (input == 2)
             {
-                // TODO : UpdateTeamCommand();
+                commandFactory.UpdateTeamCommand();
             }
             else if (input == 3)
             {
-                // TODO : UpdatePlayerStatisticCommand();
+                commandFactory.UpdatePlayerStatisticCommand();
             }
             else if (input != 4)
             {
@@ -159,11 +162,11 @@ namespace NBABlackBone.Core.Menu
         {
             if (input == 1)
             {
-                // TODO : DeletePlayerCommand();
+                commandFactory.DeletePlayerCommand();
             }
             else if (input == 2)
             {
-                // TODO : DeleteTeamCommand();
+                commandFactory.DeleteTeamCommand();
             }
             else if (input != 3)
             {

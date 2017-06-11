@@ -4,5 +4,5 @@
     {
         Eastern = 1,
         Western = 2
-    };
+    }
 }

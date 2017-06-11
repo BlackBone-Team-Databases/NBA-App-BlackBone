@@ -13,6 +13,7 @@ namespace NBABlackBone.Core.Menu
             Console.WriteLine("3. Update");
             Console.WriteLine("4. Delete");
             Console.WriteLine("5. Generete Report");
+            Console.WriteLine("6. Fill Database");
             Console.WriteLine("0. Exit");
         }
 

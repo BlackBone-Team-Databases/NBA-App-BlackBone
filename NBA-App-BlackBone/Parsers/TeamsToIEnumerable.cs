@@ -2,6 +2,7 @@
 using NbaBlackBone.Models.Contracts;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace NBABlackBone.Parsers
             this.TeamsCollection = new List<ITeam>();
         }
 
-        public void Cast()
+        public ICollection<ITeam> Cast()
         {
             string path = @"..\..\DataSource\teamstats20120510040.txt";
             var x = new TxtParse();
@@ -37,22 +38,19 @@ namespace NBABlackBone.Parsers
                 {
                     break;
                 }
-                var team = new Team()
-                {
-                    Name = array[index, name],
-                    Minutes = float.Parse(array[index, min]),
-                    OffRtg = float.Parse(array[index, offrtg]),
-                    DeffRtg = float.Parse(array[index, deffrtg]),
-                    OverallRtg = float.Parse(array[index, overalRtg])
-                };
+                var team = new Team();
+
+                team.Name = array[index, name];
+                team.Minutes = float.Parse(array[index, min], CultureInfo.InvariantCulture);
+                team.OffRtg = float.Parse(array[index, offrtg], CultureInfo.InvariantCulture);
+                team.DeffRtg = float.Parse(array[index, deffrtg], CultureInfo.InvariantCulture);
+                team.OverallRtg = float.Parse(array[index, overalRtg], CultureInfo.InvariantCulture);
+                
 
                 TeamsCollection.Add(team);
             }
 
-            foreach (var team in TeamsCollection)
-            {
-              Console.WriteLine(team.ToString());
-            }
+            return TeamsCollection;
         }
     }
 }

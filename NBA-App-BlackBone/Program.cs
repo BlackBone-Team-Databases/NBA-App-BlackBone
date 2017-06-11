@@ -5,14 +5,25 @@ using NBABlackBone.Core.Menu;
 using NBABlackBone.Models;
 using NBABlackBone.Parsers;
 using NBABlackBone.SQLite;
+using NBABlackBone.Postgre;
 using System.Collections.Generic;
 
 namespace NbaBlackBone
 {
-    class Program
+    public class Program
     {
-        static void Main()
+        public static void Main()
         {
+            var parseSched = new Json();
+            ICollection<Schedule> schedules = parseSched.ParseSchedule();
+
+
+            var fillPostgre = new FillPostgre();
+            fillPostgre.Fill(schedules);
+
+            //
+            // Uncoment to start Main MENU
+            //
             var reader = new ConsoleReaderProvider();
             var writer = new ConsoleWriterProvider();
             var commandFactory = new CommandFactory(reader, writer);
