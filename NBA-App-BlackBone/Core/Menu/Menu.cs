@@ -20,7 +20,7 @@ namespace NBABlackBone.Core.Menu
 
         public void Start()
         {
-            int input = 6;
+            int input = 7;
             while (input != 0)
             {
                 PrintMenu.MainMenu();
@@ -54,6 +54,9 @@ namespace NBABlackBone.Core.Menu
                     case 5:
                         // TODO : GenerateReportCommand()
                         break;
+                    case 6:
+                        commandFactory.FillDataBase();
+                        break;
                     case 0:
                         Environment.Exit(0);
                         break;
@@ -71,7 +74,7 @@ namespace NBABlackBone.Core.Menu
 
         private int Input()
         {
-            int input = 6; // TODO: it should be 0 or something else
+            int input = 7; // TODO: it should be 0 or something else
             bool result = int.TryParse(this.reader.ReadLine(), out input);
             if (!result)
             {
@@ -90,39 +93,35 @@ namespace NBABlackBone.Core.Menu
 
         private void CreateCommandMenu(int input)
         {
-            //using ( var unitOfWork = new UnitOfWork(new NbaContext()))
-            //{
-                if (input == 1)
-                {
-                    commandFactory.CreatePlayerCommand();
-                    // TODO : CreatePlayerCommand(reader, writer, unitOfWork);
-                    //unitOfWork.Players.Add()
-                }
-                else if (input == 2)
-                {
-                    commandFactory.CreateTeamCommand();
-                    // TODO : CreateTeamCommand(reader, writer, unitOfWork);
-                }
-                else if (input != 3)
-                {
-                    writer.WriteLine("Ivalid Value!");
-                }
-            //}
+            
+            if (input == 1)
+            {
+                this.writer.WriteLine(commandFactory.CreatePlayerCommand());
+            }
+            else if (input == 2)
+            {
+            this.writer.WriteLine(commandFactory.CreateTeamCommand());
+            }
+            else if (input != 3)
+            {
+                writer.WriteLine("Ivalid Value!");
+            }
+            
         }
 
         private void UpdateCommandMenu(int input)
         {
             if (input == 1)
             {
-                // TODO : UpdatePlayerCommand();
+                commandFactory.UpdatePlayerCommand();
             }
             else if (input == 2)
             {
-                // TODO : UpdateTeamCommand();
+                commandFactory.UpdateTeamCommand();
             }
             else if (input == 3)
             {
-                // TODO : UpdatePlayerStatisticCommand();
+                commandFactory.UpdatePlayerStatisticCommand();
             }
             else if (input != 4)
             {
@@ -135,17 +134,25 @@ namespace NBABlackBone.Core.Menu
         {
             if (input == 1)
             {
-                // TODO : ReadPlayerCommand();
+                commandFactory.ReadAllPlayersCommand();
             }
             else if (input == 2)
             {
-                // TODO : ReadTeamCommand();
+                commandFactory.ReadPlayerByIDCommand();
             }
             else if (input == 3)
             {
-                // TODO : ReadPlayerStatisticCommand();
+                commandFactory.ReadAllTeamsCommand();
             }
-            else if (input != 4)
+            else if (input == 4)
+            {
+                commandFactory.ReadTeamByIDCommand();
+            }
+            else if (input == 5)
+            {
+                commandFactory.ReadPlayerStatisticByIDCommand();
+            }
+            else if (input != 6)
             {
                 writer.WriteLine("Ivalid Value!");
             }
@@ -155,13 +162,13 @@ namespace NBABlackBone.Core.Menu
         {
             if (input == 1)
             {
-                // TODO : DeletePlayerCommand();
+                commandFactory.DeletePlayerCommand();
             }
             else if (input == 2)
             {
-                // TODO : DeleteTeamCommand();
+                commandFactory.DeleteTeamCommand();
             }
-            else if (input == 3)
+            else if (input != 3)
             {
                 writer.WriteLine("Ivalid Value!");
             }

@@ -36,27 +36,33 @@ namespace NBABlackBone.Persistance.Repositories
 
         public TEntity Get(int id)
         {
-            throw new NotImplementedException();
+            return context.Set<TEntity>().Find(id);
         }
 
         public IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return context.Set<TEntity>().ToList();
         }
 
         public void Remove(TEntity entity)
         {
-            throw new NotImplementedException();
+            context.Set<TEntity>().Remove(entity);
+            
         }
 
         public void RemoveRange(IEnumerable<TEntity> entities)
         {
-            throw new NotImplementedException();
+            context.Set<TEntity>().RemoveRange(entities);
         }
 
         public TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate)
         {
             throw new NotImplementedException();
+        }
+
+        public void Attach(TEntity entity)
+        {
+            context.Set<TEntity>().Attach(entity);
         }
     }
 }

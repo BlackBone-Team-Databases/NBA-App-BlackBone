@@ -20,5 +20,6 @@ namespace NbaBlackBone.Repositories
 
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
+        void Attach(TEntity entity);
     }
 }

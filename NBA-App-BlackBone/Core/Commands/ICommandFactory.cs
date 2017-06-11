@@ -9,8 +9,30 @@ namespace NBABlackBone.Core.Commands
 {
     public interface ICommandFactory
     {
-        void CreatePlayerCommand();
+        string CreatePlayerCommand();
 
-        void CreateTeamCommand();
+        string CreateTeamCommand();
+
+        void ReadAllPlayersCommand();
+
+        void ReadPlayerByIDCommand();
+
+        void ReadAllTeamsCommand();
+
+        void ReadTeamByIDCommand();
+
+        void ReadPlayerStatisticByIDCommand();
+
+        void DeletePlayerCommand();
+
+        void DeleteTeamCommand();
+
+        void UpdatePlayerCommand();
+
+        void UpdateTeamCommand();
+
+        void UpdatePlayerStatisticCommand();
+
+        void FillDataBase();
     }
 }
