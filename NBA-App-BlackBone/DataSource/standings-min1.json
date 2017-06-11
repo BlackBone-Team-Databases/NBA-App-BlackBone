@@ -1,0 +1,96 @@
+[
+	{
+		"ConferenceEnum": "Eastern",
+		"Teams": [
+			{
+				"Name": "Boston Celtics"
+			},
+			{
+				"Name": "Cleveland"
+			},
+			{
+				"Name": "Toronto Raptors"
+			},
+			{
+				"Name": "Washington Wizards"
+			},
+			{
+				"Name": "Atlanta Hawks"
+			},
+			{
+				"Name": "Milwaukee Bucks"
+			},
+			{
+				"Name": "Indiana"
+			},
+			{
+				"Name": "Chicago"
+			},
+			{
+				"Name": "Miami"
+			},
+			{
+				"Name": "Detroit"
+			},
+			{
+				"Name": "Charlote"
+			},
+			{
+				"Name": "New York"
+			},
+			{
+				"Name": "Orlando"
+			},
+			{
+				"Name": "Brooklyn"
+			}
+		]
+	},
+	{
+		"ConferenceEnum": "Western",
+		"Teams": [
+			{
+				"Name": "Golden State Woriors"
+			},
+			{
+				"Name": "San Antonio Spurs"
+			},
+			{
+				"Name": "Houston Rockets"
+			},
+			{
+				"Name": "LA Clippers"
+			},
+			{
+				"Name": "Utah Jazz"
+			},
+			{
+				"Name": "Oklahoma City"
+			},
+			{
+				"Name": "Memphis Grizzlez"
+			},
+			{
+				"Name": "Denver Nugerts"
+			},
+			{
+				"Name": "New Orleans"
+			},
+			{
+				"Name": "Dallas Mavericks"
+			},
+			{
+				"Name": "Sacramento"
+			},
+			{
+				"Name": "Minnesota"
+			},
+			{
+				"Name": "LA Lakers"
+			},
+			{
+				"Name": "Phoenix"
+			}
+		]
+	}
+]

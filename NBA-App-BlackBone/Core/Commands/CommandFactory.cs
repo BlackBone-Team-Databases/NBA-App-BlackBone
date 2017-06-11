@@ -2,6 +2,7 @@
 using NbaBlackBone.Core.Contracts;
 using NbaBlackBone.Models;
 using NbaBlackBone.Models.Enums;
+using NbaBlackBone.Parsers;
 using NbaBlackBone.Persistance;
 using NBABlackBone.Parsers;
 using System;
@@ -416,8 +417,8 @@ namespace NBABlackBone.Core.Commands
 
             //var Parser = new TeamsToIEnumerable();
             //var Parser = new PlayersToIEnumerable();
-            var Parser = new PlayerStatsToIEnumerable();
-            var Collection =  Parser.Cast();
+            var parser = new JsonParser();
+            var Collection = parser.Cast();
 
             foreach (var collection in Collection)
             {

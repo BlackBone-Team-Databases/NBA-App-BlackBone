@@ -37,9 +37,29 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework6.Npgsql, Version=3.1.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework6.Npgsql.3.1.1\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=3.2.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.3\lib\net451\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,12 +67,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Commands\CommandFactory.cs" />
@@ -71,6 +85,11 @@
     <Compile Include="Core\Repositories\ILeagueRepository.cs" />
     <Compile Include="Core\Repositories\IPlayerStatisticRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="MigrationsPostgre\201706111010511_InitialCreate.cs" />
+    <Compile Include="MigrationsPostgre\201706111010511_InitialCreate.Designer.cs">
+      <DependentUpon>201706111010511_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsPostgre\ConfigurationPostgre.cs" />
     <Compile Include="Migrations\201706021325403_InitialCreate.cs" />
     <Compile Include="Migrations\201706021325403_InitialCreate.Designer.cs">
       <DependentUpon>201706021325403_InitialCreate.cs</DependentUpon>
@@ -82,17 +101,26 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\Contracts\IConference.cs" />
+    <Compile Include="Models\Contracts\IDate.cs" />
     <Compile Include="Models\Contracts\IDevision.cs" />
     <Compile Include="Models\Contracts\ILeague.cs" />
     <Compile Include="Models\Contracts\IPlayer.cs" />
     <Compile Include="Models\Contracts\IPlayerStatistic.cs" />
+    <Compile Include="Models\Contracts\IStandings.cs" />
     <Compile Include="Models\Contracts\ITeam.cs" />
+    <Compile Include="Models\Contracts\ISchedule.cs" />
+    <Compile Include="Models\Contracts\ITeamAttendance.cs" />
+    <Compile Include="Models\Date.cs" />
     <Compile Include="Models\Enums\Conferences.cs" />
     <Compile Include="Models\Enums\Devisions.cs" />
+    <Compile Include="Models\Enums\HomeOrAway.cs" />
     <Compile Include="Models\Enums\Leagues.cs" />
     <Compile Include="Models\Nba.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Models\Stangings.cs" />
+    <Compile Include="Models\TeamAttendance.cs" />
     <Compile Include="Models\Wnba.cs" />
-    <Compile Include="Parsers\JsonParse.cs" />
+    <Compile Include="Parsers\Json.cs" />
     <Compile Include="Parsers\PlayerStatsToIEnumerable.cs" />
     <Compile Include="Parsers\PlayersToIEnumerable.cs" />
     <Compile Include="Parsers\TeamsToIEnumerable.cs" />
@@ -106,6 +134,8 @@
     <Compile Include="Persistance\Repositories\TeamRepository.cs" />
     <Compile Include="Persistance\UnitOfWork.cs" />
     <Compile Include="Parsers\XmlParse.cs" />
+    <Compile Include="Postgre\FillPostgre.cs" />
+    <Compile Include="Postgre\PostgreContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Devision.cs" />
@@ -120,10 +150,15 @@
     <Compile Include="Core\Repositories\ITeamRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MigrationsPostgre\201706111010511_InitialCreate.resx">
+      <DependentUpon>201706111010511_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706021325403_InitialCreate.resx">
       <DependentUpon>201706021325403_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +166,7 @@
       <DependentUpon>201706081003523_models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
