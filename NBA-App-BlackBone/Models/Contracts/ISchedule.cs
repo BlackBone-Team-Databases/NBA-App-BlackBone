@@ -9,6 +9,8 @@ namespace NBABlackBone.Models.Contracts
 {
     public interface ISchedule
     {
+        int Id { get; set; }
+
         Date Date { get; set; }
 
         ICollection<TeamAttendance> TeamAttendance { get; set; }

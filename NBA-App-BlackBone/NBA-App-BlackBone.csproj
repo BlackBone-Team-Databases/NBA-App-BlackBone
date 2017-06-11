@@ -85,6 +85,11 @@
     <Compile Include="Core\Repositories\ILeagueRepository.cs" />
     <Compile Include="Core\Repositories\IPlayerStatisticRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="MigrationsPostgre\201706111010511_InitialCreate.cs" />
+    <Compile Include="MigrationsPostgre\201706111010511_InitialCreate.Designer.cs">
+      <DependentUpon>201706111010511_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsPostgre\ConfigurationPostgre.cs" />
     <Compile Include="Migrations\201706021325403_InitialCreate.cs" />
     <Compile Include="Migrations\201706021325403_InitialCreate.Designer.cs">
       <DependentUpon>201706021325403_InitialCreate.cs</DependentUpon>
@@ -129,6 +134,8 @@
     <Compile Include="Persistance\Repositories\TeamRepository.cs" />
     <Compile Include="Persistance\UnitOfWork.cs" />
     <Compile Include="Parsers\XmlParse.cs" />
+    <Compile Include="Postgre\FillPostgre.cs" />
+    <Compile Include="Postgre\PostgreContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Devision.cs" />
@@ -149,6 +156,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MigrationsPostgre\201706111010511_InitialCreate.resx">
+      <DependentUpon>201706111010511_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706021325403_InitialCreate.resx">
       <DependentUpon>201706021325403_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +166,7 @@
       <DependentUpon>201706081003523_models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
