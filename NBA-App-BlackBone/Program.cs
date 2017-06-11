@@ -3,6 +3,8 @@ using NbaBlackBone.Parsers;
 using NBABlackBone.Core.Commands;
 using NBABlackBone.Core.Menu;
 using NBABlackBone.Models;
+using NBABlackBone.Parsers;
+using NBABlackBone.SQLite;
 using NBABlackBone.Postgre;
 using System.Collections.Generic;
 
@@ -12,8 +14,8 @@ namespace NbaBlackBone
     {
         public static void Main()
         {
-            var parse = new Json();
-            ICollection<Schedule> schedules = parse.ParseSchedule();
+            var parseSched = new Json();
+            ICollection<Schedule> schedules = parseSched.ParseSchedule();
 
 
             var fillPostgre = new FillPostgre();
@@ -26,8 +28,17 @@ namespace NbaBlackBone
             var writer = new ConsoleWriterProvider();
             var commandFactory = new CommandFactory(reader, writer);
 
-            var menu = new Menu(reader, writer, commandFactory);
-            menu.Start();
+            //var x = new PlayerStatsToIEnumerable();
+            //x.Cast();
+
+            var parse = new Json();
+            ICollection<Standing> standings = parse.ParseStanding();
+
+            var fillSQLite = new FillSQLite();
+            fillSQLite.Fill(standings);
+
+            //var menu = new Menu(reader, writer, commandFactory);
+            //menu.Start();
         }
     }
 }
