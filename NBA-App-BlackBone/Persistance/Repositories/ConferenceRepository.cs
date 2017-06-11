@@ -22,5 +22,10 @@ namespace NBABlackBone.Persistance.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public NbaContext NbaContext
+        {
+            get { return context as NbaContext; }
+        }
     }
 }

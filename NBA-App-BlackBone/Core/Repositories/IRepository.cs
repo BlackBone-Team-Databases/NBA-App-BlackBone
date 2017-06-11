@@ -16,7 +16,7 @@ namespace NbaBlackBone.Repositories
         TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate);
 
         void Add(TEntity entity);
-        void AddRange(IEnumerable<TEntity> entities);
+        void AddRange(ICollection<TEntity> entities);
 
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);

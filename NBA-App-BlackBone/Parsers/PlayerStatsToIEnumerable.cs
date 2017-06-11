@@ -11,14 +11,14 @@ namespace NBABlackBone.Parsers
 {
     public class JsonParser
     {
-        ICollection<IPlayerStatistic> playersStatsCollection;
+        ICollection<PlayerStatistic> playersStatsCollection;
 
         public JsonParser()
         {
-            this.playersStatsCollection = new List<IPlayerStatistic>();
+            this.playersStatsCollection = new List<PlayerStatistic>();
         }
 
-        public ICollection<IPlayerStatistic> Cast()
+        public ICollection<PlayerStatistic> Cast()
         {
             string path = @"..\..\DataSource\playerstats20120510040.txt";
             var x = new TxtParse();
@@ -29,7 +29,7 @@ namespace NBABlackBone.Parsers
             int SpointsF = 7;
             int SorebF = 12;
 
-            for (int index = 1; index < array.GetLength(0); index++)
+            for (int index = 2; index < array.GetLength(0); index++)
             {
                 if (string.IsNullOrEmpty(array[index, 0]))
                 {
@@ -44,7 +44,6 @@ namespace NBABlackBone.Parsers
                 };
 
                 playersStatsCollection.Add(playerStats);
-                Console.WriteLine();
             }
 
             return playersStatsCollection;

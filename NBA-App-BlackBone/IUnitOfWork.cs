@@ -1,4 +1,5 @@
 ﻿using NbaBlackBone.Repositories;
+using NBABlackBone.Core.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace NbaBlackBone
         IPlayerRepository Players { get; }
 
         IDevisionRepository Devisions { get; }
+
+        IConferenceRepository Conference { get;  }
 
         int Complete();
     }

@@ -20,7 +20,8 @@ namespace NbaBlackBone.Persistance
             this.Teams = new TeamRepository(context);
             this.PlayerStatistic = new PlayerStatisticRepository(context);
             this.Devisions = new DevisionRepository(context);
-            
+            this.Conference = new ConferenceRepository(context);
+            this.League = new LeagueRepository(context);
         }
 
         public IDevisionRepository Devisions { get; private set; }
@@ -32,6 +33,9 @@ namespace NbaBlackBone.Persistance
         public ILeagueRepository League { get; private set; }
 
         public IPlayerStatisticRepository PlayerStatistic { get; private set; }
+
+        public IConferenceRepository Conference { get; private set; }
+
 
         public object Update(object entry)
         {

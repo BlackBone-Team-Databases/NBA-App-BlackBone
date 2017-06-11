@@ -11,14 +11,14 @@ namespace NBABlackBone.Parsers
 {
     class TeamsToIEnumerable
     {
-        ICollection<ITeam> TeamsCollection;
+        ICollection<Team> TeamsCollection;
 
         public TeamsToIEnumerable()
         {
-            this.TeamsCollection = new List<ITeam>();
+            this.TeamsCollection = new List<Team>();
         }
 
-        public ICollection<ITeam> Cast()
+        public ICollection<Team> Cast()
         {
             string path = @"..\..\DataSource\teamstats20120510040.txt";
             var x = new TxtParse();

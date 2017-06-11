@@ -24,7 +24,7 @@ namespace NBABlackBone.Persistance.Repositories
             context.Set<TEntity>().Add(entity);
         }
 
-        public void AddRange(IEnumerable<TEntity> entities)
+        public void AddRange(ICollection<TEntity> entities)
         {
             context.Set<TEntity>().AddRange(entities);
         }
