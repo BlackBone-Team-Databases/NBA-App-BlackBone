@@ -13,7 +13,7 @@ namespace NBABlackBone.MigrationsSQLite
         
         string IMigrationMetadata.Id
         {
-            get { return "201706101434025_Initial"; }
+            get { return "201706111040413_Initial"; }
         }
         
         string IMigrationMetadata.Source

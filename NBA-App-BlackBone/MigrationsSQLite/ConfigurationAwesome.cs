@@ -15,6 +15,26 @@ namespace NBABlackBone.MigrationsSQLite
             SetSqlGenerator("System.Data.SQLite", new SQLiteMigrationSqlGenerator());
         }
 
+        internal sealed class DBMigrationsConfig : DbMigrationsConfiguration<NBABlackBone.SQLite.StandingsDbContext>
+        {
+            private readonly bool pendingMigrations;
+
+            public DBMigrationsConfig()
+            {
+                AutomaticMigrationsEnabled = true;
+                AutomaticMigrationDataLossAllowed = true;
+
+                var migrator = new DbMigrator(this);
+                this.pendingMigrations = migrator.GetPendingMigrations().Any();
+
+                if(pendingMigrations)
+                {
+                    migrator.Update();
+                    Seed(new NBABlackBone.SQLite.StandingsDbContext());
+                }
+            }
+        }
+
         protected override void Seed(NBABlackBone.SQLite.StandingsDbContext context)
         {
             //  This method will be called after migrating to the latest version.

@@ -88,9 +88,9 @@
     <Compile Include="Core\Repositories\ILeagueRepository.cs" />
     <Compile Include="Core\Repositories\IPlayerStatisticRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
-    <Compile Include="MigrationsSQLite\201706101434025_Initial.cs" />
-    <Compile Include="MigrationsSQLite\201706101434025_Initial.Designer.cs">
-      <DependentUpon>201706101434025_Initial.cs</DependentUpon>
+    <Compile Include="MigrationsSQLite\201706111040413_Initial.cs" />
+    <Compile Include="MigrationsSQLite\201706111040413_Initial.Designer.cs">
+      <DependentUpon>201706111040413_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="MigrationsSQLite\ConfigurationAwesome.cs" />
     <Compile Include="Migrations\201706021325403_InitialCreate.cs" />
@@ -142,6 +142,7 @@
     <Compile Include="Core\Repositories\IPlayerRepository.cs" />
     <Compile Include="Core\Repositories\IRepository.cs" />
     <Compile Include="Core\Repositories\ITeamRepository.cs" />
+    <Compile Include="SQLite\FillSQLite.cs" />
     <Compile Include="SQLite\StandingsDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -149,8 +150,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MigrationsSQLite\201706101434025_Initial.resx">
-      <DependentUpon>201706101434025_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="MigrationsSQLite\201706111040413_Initial.resx">
+      <DependentUpon>201706111040413_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706021325403_InitialCreate.resx">
       <DependentUpon>201706021325403_InitialCreate.cs</DependentUpon>

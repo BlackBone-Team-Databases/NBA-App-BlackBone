@@ -4,6 +4,7 @@ using NBABlackBone.Core.Commands;
 using NBABlackBone.Core.Menu;
 using NBABlackBone.Models;
 using NBABlackBone.Parsers;
+using NBABlackBone.SQLite;
 using System.Collections.Generic;
 
 namespace NbaBlackBone
@@ -21,6 +22,9 @@ namespace NbaBlackBone
 
             var parse = new Json();
             ICollection<Standing> standings = parse.ParseStanding();
+
+            var fillSQLite = new FillSQLite();
+            fillSQLite.Fill(standings);
 
             //var menu = new Menu(reader, writer, commandFactory);
             //menu.Start();
