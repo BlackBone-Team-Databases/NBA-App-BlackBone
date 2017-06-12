@@ -53,11 +53,13 @@ namespace NBABlackBone.Core.Menu
                         DeleteCommandMenu(input);
                         break;
                     case 5:
-                        // TODO : GenerateReportCommand()
                         var context = new NbaContext();
-
-                        var pdf = new PdfReporter(context);
-                        pdf.GenerateReport("../../REPORTS");
+                        var pdfT = new PdfReporterTeam(context);
+                        var pdfP = new PdfReporterPlayer(context);
+                        var pdfPS = new PdfReporterPlayerStats(context);
+                        pdfT.GenerateReport("../../REPORTS");
+                        pdfP.GenerateReport("../../REPORTS");
+                        pdfPS.GenerateReport("../../REPORTS");
                         break;
                     case 6:
                         commandFactory.FillDataBase();

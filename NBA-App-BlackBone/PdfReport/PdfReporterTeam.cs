@@ -1,36 +1,16 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
 using NbaBlackBone.Persistance;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NBABlackBone.PdfReport
 {
-    class PdfReporter : IReporter
+    class PdfReporterTeam : IReporter
     {
-        //public const string FilePaths = @"C:/Users/admin/Desktop/Pdf-Reports/Conference,Team,Player,Stats-report-{0}.pdf";
-        //private const string Devision = "Devison";
-        //private const string TeamName = "Team";
-        //private const string Player = "Player";
-        //private const string PdfFont = "Times New Roman";
-
-
-        //public void GetValuesForReport()
-        //{
-        //using (var unitOfWork = new UnitOfWork(new NbaContext()))
-        //{
-        //    var allConference = unitOfWork.Conference.GetAll();
-        //    var top6Teams = unitOfWork.Teams.GetTopTeams(10);
-        //    var top6Players = unitOfWork.Players.GetTopPlayers(10);           
-        //}
-        //}
         private NbaContext dbContext;
 
-        public PdfReporter(NbaContext context)
+        public PdfReporterTeam(NbaContext context)
         {
             this.dbContext = context;
         }
@@ -39,7 +19,7 @@ namespace NBABlackBone.PdfReport
         {
             Directory.CreateDirectory(path);
 
-            var filePath = path + "/Team.pdf";
+            var filePath = path + "/Team-Report.pdf";
             using (var stream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
             {
                 Document doc = new Document();
@@ -52,12 +32,12 @@ namespace NBABlackBone.PdfReport
                 var normalFont = FontFactory.GetFont(FontFactory.HELVETICA, 12);
                 var boldFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12);
                 var table = new PdfPTable(columns);
-                PdfPCell cell = new PdfPCell(new Phrase("NBA report", titleFont));
+                PdfPCell cell = new PdfPCell(new Phrase("Team report", titleFont));
                 cell.Colspan = 5;
                 cell.HorizontalAlignment = 1;
                 table.AddCell(cell);
 
-                var tableHeaders = new List<string>() { "Team", "Minutes", "OffRtg", "DeffRtg", "OveralRating" };
+                var tableHeaders = new List<string>() { "Team", "Minutes", "OffRtg", "DeffRtg", "OveralRating"};
                 for (int i = 0; i < columns; i++)
                 {
                     var headerCell = new PdfPCell(new Phrase(tableHeaders[i], boldFont));
@@ -79,14 +59,14 @@ namespace NBABlackBone.PdfReport
                     var min = te.Minutes;
                     minutes.AddElement(new Phrase(min.ToString()));
                     var off = te.OffRtg;
-                    minutes.AddElement(new Phrase(off.ToString()));
+                    offrtg.AddElement(new Phrase(off.ToString()));
                     var deff = te.DeffRtg;
-                    minutes.AddElement(new Phrase(deff.ToString()));
-                    var over = te.OffRtg;
-                    minutes.AddElement(new Phrase(over.ToString()));
+                    deffrtg.AddElement(new Phrase(deff.ToString()));
+                    var over = te.OverallRtg;
+                    overal.AddElement(new Phrase(over.ToString()));
 
-                    table.AddCell(minutes);
                     table.AddCell(team);
+                    table.AddCell(minutes); 
                     table.AddCell(offrtg);
                     table.AddCell(deffrtg);
                     table.AddCell(overal);

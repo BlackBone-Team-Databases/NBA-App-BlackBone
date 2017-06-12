@@ -174,7 +174,9 @@
     <Compile Include="Parsers\TeamsToIEnumerable.cs" />
     <Compile Include="Parsers\TxtParse.cs" />
     <Compile Include="PdfReport\IReporter.cs" />
-    <Compile Include="PdfReport\PdfReporter.cs" />
+    <Compile Include="PdfReport\PdfReporterPlayerStats.cs" />
+    <Compile Include="PdfReport\PdfReporterTeam.cs" />
+    <Compile Include="PdfReport\PdfReporterPlayer.cs" />
     <Compile Include="Persistance\Repositories\ConferenceRepository.cs" />
     <Compile Include="Persistance\Repositories\DevisionRepository.cs" />
     <Compile Include="Persistance\Repositories\LeagueRepository.cs" />
