@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NbaBlackBone.Models.Enums;
 using NbaBlackBone.Models.Contracts;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NbaBlackBone.Models
 {
@@ -12,7 +13,8 @@ namespace NbaBlackBone.Models
         {
 
         }
-        [Required]
+
+        [Index("Id")]
         public int Id { get; set; }
 
         public ConferencesEnum ConferenceEnum { get; set; }

@@ -21,23 +21,6 @@ namespace NBABlackBone.Postgre
                     db.Scedules.Add(item);
                 }
 
-                //var sched = new Schedule();
-                //sched.Arena = "Orcle";
-
-                //sched.Date = new Date();
-                //sched.Date.Day = 4;
-                //sched.Date.Month = 6;
-                //sched.Date.Year = 2017;
-
-                //var teamAttend = new TeamAttendance();
-                //teamAttend.Name = "Cleveland";
-                //teamAttend.HomeOrAway = HomeOrAway.Away;
-                //teamAttend.Score = 144;
-                //sched.TeamAttendance.Add(teamAttend);
-
-                //db.Scedules.Add(sched);
-
-
                 db.SaveChanges();
             }
         }

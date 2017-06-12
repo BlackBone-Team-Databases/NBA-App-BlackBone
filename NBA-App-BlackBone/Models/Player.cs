@@ -12,6 +12,7 @@ namespace NbaBlackBone.Models
             
         }
 
+        [Index("Id")]
         public int Id { get; set; }
 
         [Required]

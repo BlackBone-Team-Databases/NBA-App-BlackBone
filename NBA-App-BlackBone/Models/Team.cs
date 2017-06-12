@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NbaBlackBone.Models
 {
@@ -12,6 +13,7 @@ namespace NbaBlackBone.Models
 
         }
 
+        [Index("Id")]
         public int Id { get; set; }
 
         [Required]

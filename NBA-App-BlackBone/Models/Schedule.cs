@@ -18,18 +18,17 @@ namespace NBABlackBone.Models
             this.TeamAttendance = new HashSet<TeamAttendance>();
         }
 
-        [Key]
-        [Column("id")]
+        [Index("Id")]
         public int Id { get; set; }
 
-        [Column("date")]
+        [Column("Date")]
         public Date Date { get; set; }
 
-        [Key]
-        [Column("attendance")]
+        
+        [Column("Attendance")]
         public virtual ICollection<TeamAttendance> TeamAttendance { get; set; }
 
-        [Column("arena")]
+        [Column("Arena")]
         public string Arena { get; set; }
     }
 }

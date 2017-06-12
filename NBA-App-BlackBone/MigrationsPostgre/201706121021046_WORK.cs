@@ -3,7 +3,7 @@ namespace NBABlackBone.MigrationsPostgre
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class WORK : DbMigration
     {
         public override void Up()
         {
@@ -11,26 +11,28 @@ namespace NBABlackBone.MigrationsPostgre
                 "public.Schedules",
                 c => new
                     {
-                        id = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         Date_Day = c.Int(nullable: false),
                         Date_Month = c.Int(nullable: false),
                         Date_Year = c.Int(nullable: false),
-                        arena = c.String(),
+                        Arena = c.String(),
                     })
-                .PrimaryKey(t => t.id);
+                .PrimaryKey(t => t.Id)
+                .Index(t => t.Id, name: "Id");
             
             CreateTable(
                 "dbo.TeamAttendances",
                 c => new
                     {
-                        id = c.Int(nullable: false, identity: true),
-                        name = c.String(),
-                        score = c.Int(nullable: false),
-                        HOR = c.Int(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
+                        TeamName = c.String(name: "Team Name"),
+                        Score = c.Int(nullable: false),
+                        HomeorAway = c.Int(name: "Home or Away", nullable: false),
                         Schedule_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.id)
+                .PrimaryKey(t => t.Id)
                 .ForeignKey("public.Schedules", t => t.Schedule_Id)
+                .Index(t => t.Id, name: "Id")
                 .Index(t => t.Schedule_Id);
             
         }
@@ -39,6 +41,8 @@ namespace NBABlackBone.MigrationsPostgre
         {
             DropForeignKey("dbo.TeamAttendances", "Schedule_Id", "public.Schedules");
             DropIndex("dbo.TeamAttendances", new[] { "Schedule_Id" });
+            DropIndex("dbo.TeamAttendances", "Id");
+            DropIndex("public.Schedules", "Id");
             DropTable("dbo.TeamAttendances");
             DropTable("public.Schedules");
         }

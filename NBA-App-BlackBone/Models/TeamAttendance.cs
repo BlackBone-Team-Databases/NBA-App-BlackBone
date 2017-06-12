@@ -17,17 +17,16 @@ namespace NBABlackBone.Models
 
         }
 
-        [Key]
-        [Column("id")]
+        [Index("Id")]
         public int Id { get; set; }
 
-        [Column("name")]
+        [Column("Team Name")]
         public string Name { get; set; }
 
-        [Column("score")]
+        [Column("Score")]
         public int Score { get; set; }
 
-        [Column("HOR")]
+        [Column("Home or Away")]
         public HomeOrAway HomeOrAway { get; set; }
     }
 }

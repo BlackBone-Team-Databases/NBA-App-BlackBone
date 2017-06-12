@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NbaBlackBone.Models;
 using NbaBlackBone.Models.Enums;
 using NbaBlackBone.Models.Contracts;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NbaBlackBone
 {
@@ -14,6 +15,7 @@ namespace NbaBlackBone
 
         }
 
+        [Index("Id")]
         public int Id { get; set; }
 
         public DevisionsEnum DevisionEnum { get; set; }

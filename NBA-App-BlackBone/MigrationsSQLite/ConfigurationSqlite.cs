@@ -10,7 +10,7 @@ namespace NBABlackBone.MigrationsSQLite
     {
         public ConfigurationSqlite()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             MigrationsDirectory = @"MigrationsSQLite";
             SetSqlGenerator("System.Data.SQLite", new SQLiteMigrationSqlGenerator());
         }

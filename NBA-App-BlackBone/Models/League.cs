@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using NbaBlackBone.Models.Enums;
 using NbaBlackBone.Models.Contracts;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NbaBlackBone.Models
 {
@@ -11,6 +13,7 @@ namespace NbaBlackBone.Models
         {
 
         }
+        [Index("Id")]
         public int Id { get; set; }
 
         public LeaguesEnum LeagueEnum { get; set; }
