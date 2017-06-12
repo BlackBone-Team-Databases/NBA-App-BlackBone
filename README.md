@@ -1,6 +1,18 @@
 # NBA-App-BlackBone
 Teamwork, Databases
 
+## NBA Stats
+
+### Team Members
+* boda66
+* despolov96
+* purlantov
+
+### Project Description
+**NBA Stats** is an application written on C#, using different types of databases like SQL Server, Postgre and SQLite and it imports files to databases and exports pdf reports.
+
+### Client Interface
+The application uses basic CRUD for manipulating the database, where you can create players, teams and statistics, read them, update them, delete them, and also create Pdf reports.
 
 # Databases May 2017
 ## Practical Teamwork Project
