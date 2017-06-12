@@ -7,9 +7,9 @@ namespace NBABlackBone.Core.Menu
 {
     public class Menu
     {
-        private IReader reader;
-        private IWriter writer;
-        private ICommandFactory commandFactory;
+        protected IReader reader;
+        protected IWriter writer;
+        protected ICommandFactory commandFactory;
 
         public Menu(IReader reader, IWriter writer, ICommandFactory commandFactory)
         {
@@ -72,7 +72,7 @@ namespace NBABlackBone.Core.Menu
 
 
 
-        private int Input()
+        protected int Input()
         {
             int input = 7; // TODO: it should be 0 or something else
             bool result = int.TryParse(this.reader.ReadLine(), out input);
@@ -84,14 +84,14 @@ namespace NBABlackBone.Core.Menu
             return input;
         }
 
-        private void PrintDelimeter()
+        protected void PrintDelimeter()
         {
             this.writer.EmptyLine();
             this.writer.WriteLine("======================================================");
             this.writer.EmptyLine();
         }
 
-        private void CreateCommandMenu(int input)
+        protected void CreateCommandMenu(int input)
         {
             
             if (input == 1)
@@ -109,7 +109,7 @@ namespace NBABlackBone.Core.Menu
             
         }
 
-        private void UpdateCommandMenu(int input)
+        protected void UpdateCommandMenu(int input)
         {
             if (input == 1)
             {
@@ -130,7 +130,7 @@ namespace NBABlackBone.Core.Menu
         }
 
 
-        private void ReadCommandMenu(int input)
+        protected void ReadCommandMenu(int input)
         {
             if (input == 1)
             {
@@ -158,7 +158,7 @@ namespace NBABlackBone.Core.Menu
             }
         }
 
-        private void DeleteCommandMenu(int input)
+        protected void DeleteCommandMenu(int input)
         {
             if (input == 1)
             {
