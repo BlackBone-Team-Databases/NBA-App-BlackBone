@@ -1,6 +1,7 @@
 ﻿using NbaBlackBone.Core.Contracts;
 using NbaBlackBone.Persistance;
 using NBABlackBone.Core.Commands;
+using NBABlackBone.PdfReport;
 using System;
 
 namespace NBABlackBone.Core.Menu
@@ -53,6 +54,10 @@ namespace NBABlackBone.Core.Menu
                         break;
                     case 5:
                         // TODO : GenerateReportCommand()
+                        var context = new NbaContext();
+
+                        var pdf = new PdfReporter(context);
+                        pdf.GenerateReport("../../REPORTS");
                         break;
                     case 6:
                         commandFactory.FillDataBase();

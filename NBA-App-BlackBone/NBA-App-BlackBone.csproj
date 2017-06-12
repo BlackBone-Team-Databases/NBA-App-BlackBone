@@ -51,6 +51,9 @@
       <HintPath>..\packages\EntityFramework6.Npgsql.3.1.1\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.11.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.11\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Data.Sqlite, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.Sqlite.1.1.1\lib\net451\Microsoft.Data.Sqlite.dll</HintPath>
       <Private>True</Private>
@@ -170,6 +173,8 @@
     <Compile Include="Parsers\PlayersToIEnumerable.cs" />
     <Compile Include="Parsers\TeamsToIEnumerable.cs" />
     <Compile Include="Parsers\TxtParse.cs" />
+    <Compile Include="PdfReport\IReporter.cs" />
+    <Compile Include="PdfReport\PdfReporter.cs" />
     <Compile Include="Persistance\Repositories\ConferenceRepository.cs" />
     <Compile Include="Persistance\Repositories\DevisionRepository.cs" />
     <Compile Include="Persistance\Repositories\LeagueRepository.cs" />
